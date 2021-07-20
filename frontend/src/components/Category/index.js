@@ -13,8 +13,9 @@ const Category = () => {
       <Subtitle>Sungkyunkwan University </Subtitle>
       <Title>Announcement</Title>
       <Submenu>
-        {menuItems.map((elem) => (
+        {menuItems.map((elem, i) => (
           <MenuItem
+            key={i}
             focused={clicked === elem}
             onClick={() => handleClick(elem)}
           >

@@ -14,8 +14,10 @@ const Menu = () => {
           <Logo src={logo} />
         </Link>
         <MenuDiv>
-          {menuItems.map((elem) => (
-            <MenuItem to={`/${elem.toLowerCase()}`}>{elem}</MenuItem>
+          {menuItems.map((elem, i) => (
+            <MenuItem key={i} to={`/${elem.toLowerCase()}`}>
+              {elem}
+            </MenuItem>
           ))}
         </MenuDiv>
       </Container>
