@@ -8,7 +8,7 @@ function App() {
       <Menu />
       <RenderRoutes routes={ROUTES} />
       <Footer>
-        Copyright (c) G-cubed All Rights Re-served. Design by DSSO.KR
+        Woong
       </Footer>
     </Layout>
   );
