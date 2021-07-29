@@ -11,4 +11,8 @@ const Container = styled.div`
   flex: 0 0 40px;
 `;
 
+const Content = styled.p`
+  color: black;
+`
+
 export default Container;

@@ -5,10 +5,9 @@ export const Container = styled.nav`
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #1e2749;
+  background-color: #fff;
   height: 70px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex: 0 0 70px;
@@ -32,6 +31,14 @@ export const MenuItem = styled(Link)`
   text-decoration: none;
   user-select: none;
   font-size: 24px;
-  color: white;
+  color: black;
   ${(props) => props.focused && `color: red`}
 `;
+
+export const Title = styled.h1`
+  display:inline;
+  font-size: 30px;
+  color: black;
+
+`
+// 로고 옆 학교 이름이 정확한 센터에 오지 않음

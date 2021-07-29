@@ -1,7 +1,13 @@
-import { Main } from "../../components";
+import { MainNews, Main } from "../../components";
+
 
 const Home = () => {
-  return <Main />;
+  return( 
+    <>
+    <Main/>
+    <MainNews />
+    </>
+  );
 };
 
 export default Home;

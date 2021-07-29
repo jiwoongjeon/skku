@@ -2,32 +2,48 @@ import styled from "styled-components/macro";
 import background from "../../assets/images/background.jpg";
 
 export const Container = styled.main`
-  height: 100%;
+  height: 576dp;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content:flex-start;
   flex: 1 1 auto;
+  background-color: lightgrey;
+  padding: 7%;
+  
 `;
 
-export const Background = styled.div`
-  background: lightblue url(${background}) center/100% no-repeat;
-  filter: blur(2px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+export const Title = styled.p`
+  color: black;
+  font-size: 50px;
+  margin-top: 0;
 `;
 
-export const Title = styled.h1`
+export const Subtitle = styled.p`
+  margin-top : 0;
+  color: black;
+  font-size: 20px;
+`;
+
+
+export const Content = styled.p`
+  margin: 0px;
+  width: 760px;
+  color:black;
+  font-size: 15px;
+`
+export const ButtonContainer = styled.div`
+  margin-top: 50px;
+  flex-direction: column;
+  margin-bottom: 30px;
+`
+export const Button = styled.button`
+  width: 188px;
+  height: 60px;
+  margin-right: 10px;
+  justify-content:center;
+  background: black;
   color: white;
-  font-size: 70px;
-  margin-top: -5px;
-`;
-
-export const Subtitle = styled.h2`
-  color: white;
-  font-size: 30px;
-`;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+`
