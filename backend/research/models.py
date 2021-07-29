@@ -1,11 +1,7 @@
 from django.db import models
+from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.api import APIField
 from wagtail.core.models import Page
-from wagtail.admin.edit_handlers import FieldPanel
-
-
-class ResearchIndexPage(Page):
-    pass
 
 
 class ResearchPage(Page):
