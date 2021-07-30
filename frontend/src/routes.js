@@ -3,12 +3,12 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "./views/Home";
 import Members from "./views/Members";
-import News from "./views/News";
+import About from "./views/About";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
   { path: "/members", key: "MEMBERS", component: () => <Members /> },
-  { path: "/news", key: "NEWS", component: () => <News /> },
+  { path: "/about", key: "ABOUT", component: () => <About /> },
 ];
 
 export default ROUTES;

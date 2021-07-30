@@ -36,9 +36,12 @@ export const MenuItem = styled(Link)`
 `;
 
 export const Title = styled.h1`
-  display:inline;
+  display:flex;
+  margin: 0;
   font-size: 30px;
   color: black;
+  justify-content: flex-end;
+
 
 `
 // 로고 옆 학교 이름이 정확한 센터에 오지 않음

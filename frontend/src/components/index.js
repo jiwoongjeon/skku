@@ -6,3 +6,5 @@ export { default as Menu } from "./Menu";
 export { default as Main } from "./Main";
 export { default as Footer } from "./Footer";
 export { default as MainNews } from "./MainNews";
+export {default as MainResearch} from "./MainResearch";
+export {default as Section} from "./Section";

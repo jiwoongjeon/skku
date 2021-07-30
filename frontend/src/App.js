@@ -7,9 +7,9 @@ function App() {
     <Layout>
       <Menu />
       <RenderRoutes routes={ROUTES} />
-      <Footer>
+      {/* <Footer>
         Woong
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 }

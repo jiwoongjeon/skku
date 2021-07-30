@@ -1,4 +1,4 @@
-import { MainNews, Main } from "../../components";
+import { MainNews, Main, MainResearch } from "../../components";
 
 
 const Home = () => {
@@ -6,6 +6,7 @@ const Home = () => {
     <>
     <Main/>
     <MainNews />
+    <MainResearch/>
     </>
   );
 };

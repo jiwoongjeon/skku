@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo.png";
 import { Container, Logo, MenuDiv, MenuItem, Title } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["News", "Members", "Research", "Publication", "Contact"];
+  const menuItems = ["About", "Members", "Research", "Publication", "Contact"];
 
   return (
     <>
