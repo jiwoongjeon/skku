@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Container, Title, Subtitle, Submenu, MenuItem, ContainerTest } from "./styles";
+import { Container, Title, Subtitle, Submenu, MenuItem, ContainerTest, Subcontainer } from "./styles";
 
 const Category = () => {
-  const menuItems = ["포럼 안내/신청", "K-NSSE/UICA 안내", "기타 연구실 공지"];
+  const menuItems = ["연구소 소개", "조직도", "기타"];
   const [clicked, setClicked] = useState("");
 
   const handleClick = (item) => {
@@ -10,6 +10,14 @@ const Category = () => {
   };
   return (
     <ContainerTest>
+
+      <Subcontainer>
+
+      <Subtitle>Global Leading Education Group</Subtitle>
+      <Title>About</Title>
+      
+
+      </Subcontainer>
 
       <Submenu>
         {menuItems.map((elem, i) => (

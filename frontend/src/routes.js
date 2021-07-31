@@ -7,7 +7,7 @@ import About from "./views/About";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  { path: "/members", key: "MEMBERS", component: () => <Members /> },
+  { path: "/k-nesse", key: "K-NESSE", component: () => <Members /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
 ];
 

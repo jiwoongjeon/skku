@@ -1,10 +1,11 @@
-import { Section, Category, List } from "../../components";
+import { Section, SectionPage } from "../../components";
 
 const About = () => {
   return (
     <>
 
       <Section />
+      <SectionPage />
       
       
       {/* <List /> */}

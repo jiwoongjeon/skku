@@ -8,3 +8,4 @@ export { default as Footer } from "./Footer";
 export { default as MainNews } from "./MainNews";
 export {default as MainResearch} from "./MainResearch";
 export {default as Section} from "./Section";
+export {default as SectionPage} from "./SectionPage";

@@ -1,16 +1,21 @@
 import styled from "styled-components/macro";
-import background from "../../assets/images/background.jpg";
 
 export const Container = styled.main`
-  height: 576dp;
+  margin-top: 108px;
+  margin-left: 135px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
-  flex: 1 1 auto;
   background-color: lightgrey;
-  padding: 7%;
   
 `;
+
+export const Background = styled.div`
+  background-color: lightgrey;
+  height: 576px;
+`
+;
+
 
 export const Title = styled.p`
   color: black;
@@ -26,15 +31,16 @@ export const Subtitle = styled.p`
 
 
 export const Content = styled.p`
-  margin: 0px;
+
+  margin-top: 30px;
+  margin-bottom:51px;
   width: 760px;
   color:black;
-  font-size: 15px;
+  font-size: 20px;
 `
 export const ButtonContainer = styled.div`
-  margin-top: 50px;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-left:135px;
 `
 export const Button = styled.button`
   width: 188px;
