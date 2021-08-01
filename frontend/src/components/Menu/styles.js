@@ -11,11 +11,13 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: space-between;
   flex: 0 0 70px;
+  text-align: center;
 `;
 
 export const Logo = styled.img`
-  width: 63px;
-  height: 63px;
+  margin-left: 109px;
+  width: 54px;
+  height: 34px;
   padding-left: 16px;
 `;
 
@@ -24,7 +26,7 @@ export const MenuDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
-  padding-right: 16px;
+  margin-right: 60px;
 `;
 
 export const MenuItem = styled(Link)`
@@ -35,10 +37,15 @@ export const MenuItem = styled(Link)`
   ${(props) => props.focused && `color: red`}
 `;
 
-export const Title = styled.h1`
-  display: inline;
+export const Title = styled.p`
+
+  display: inline-block;
+  align-items: center;
+  justifiy-content: center;
   font-size: 30px;
+  text-align: center;
   color: black;
+  text-decoration: none;
 `
 export const Sub = styled.div`
   display:flex;

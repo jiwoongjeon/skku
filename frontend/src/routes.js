@@ -2,12 +2,12 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Home from "./views/Home";
-import Members from "./views/Members";
 import About from "./views/About";
+import KNESSE from "./views/KNESSE";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  { path: "/k-nesse", key: "K-NESSE", component: () => <Members /> },
+  { path: "/k-nesse", key: "K-NESSE", component: () => <KNESSE /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
 ];
 

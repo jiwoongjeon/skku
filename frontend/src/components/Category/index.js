@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Title, Subtitle, Submenu, MenuItem, ContainerTest, Subcontainer } from "./styles";
 
 const Category = () => {
-  const menuItems = ["연구소 소개", "조직도", "기타"];
+  const menuItems = ["연구소 소개", "조직도", "찾아오시는 길", "기타"];
   const [clicked, setClicked] = useState("");
 
   const handleClick = (item) => {

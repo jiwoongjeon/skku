@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Title, CardviewContainer } from './styles'
+import { Container, Title, CardviewContainer, Subtitle } from './styles'
 import Cardtype1 from "../Cardtype1/Cardtype1"
 import Cardtype2 from '../Cardtype2/Cardtype2'
 
@@ -10,6 +10,7 @@ const MainResearch = () => {
         <>
             <Container>
                 <Title>Research</Title>
+                <Subtitle>Achieve that we made in Global Education Group</Subtitle>
         
                 <CardviewContainer>
                     <Cardtype2
@@ -23,6 +24,7 @@ const MainResearch = () => {
                         title = "Title"
                         content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.">
                     </Cardtype2>
+                    
                     
                 </CardviewContainer>
             </Container>

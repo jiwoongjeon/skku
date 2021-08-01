@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import mainbackground3 from "../../assets/images/mainbackground3.png"
 
 export const Container = styled.div`
   height: 720px;
@@ -6,24 +7,34 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #4C7CA8;
+  background: url(${mainbackground3}) center/100% no-repeat;
   align-items: center;
+
 
 `;
 
 export const Title = styled.p`
   margin-top:90px;
-  margin-bottom:40px;
+  margin-bottom:10px;
   text-align: center;
   color: white;
   font-size: 50px;
 
 `;
 
+export const Subtitle = styled.p`
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: overline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #004383;
+  margin-bottom: 54px;
+`
+
 export const CardviewContainer = styled.div` 
   display: flex;
   flex-direction: row;
-  margin: 50px;
   justify-content: center;
   align-content: center;
   width: 1170px;

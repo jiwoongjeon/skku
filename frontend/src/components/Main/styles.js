@@ -1,18 +1,19 @@
 import styled from "styled-components/macro";
+import mainbackground from "../../assets/images/mainbackground.png";
+
+
 
 export const Container = styled.main`
-  margin-top: 108px;
-  margin-left: 135px;
+  margin-top: 148px;
+  margin-left: 207px;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
-  background-color: lightgrey;
-  
 `;
 
 export const Background = styled.div`
-  background-color: lightgrey;
-  height: 576px;
+  background: url(${mainbackground}) center/100% no-repeat;
+  height: 696px;;
 `
 ;
 
@@ -40,7 +41,7 @@ export const Content = styled.p`
 `
 export const ButtonContainer = styled.div`
   flex-direction: column;
-  margin-left:135px;
+  margin-left:207px;
 `
 export const Button = styled.button`
   width: 188px;

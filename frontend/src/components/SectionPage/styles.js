@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import temp from "../../assets/images/temp.png"
 
 export const Container = styled.div`
     width:100%;
@@ -12,7 +13,7 @@ export const Container = styled.div`
 export const Image = styled.img`
     width: 50%;
     height: 600px;
-    background-color: white;
+    background: url(${temp}) center/100% no-repeat;
 
 `
 
@@ -21,7 +22,7 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     width: 50%;
     height: 600px;
-    background-color: grey;
+    background-color: white;
     
 
 `
@@ -33,6 +34,11 @@ export const Title = styled.h1`
     margin-right: 60px;
     font-size: 40px;
     font-color: black;
+    text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 1 em;
+    text-underline-offset: 10px;
+
 
 `
 

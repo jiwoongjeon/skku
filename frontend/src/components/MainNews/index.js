@@ -1,16 +1,15 @@
 import React from 'react'
-import { Container, Title, CardviewContainer } from './styles'
+import { Container, Title, CardviewContainer, Subtitle } from './styles'
 import Cardtype1 from "../Cardtype1/Cardtype1"
-
 
 
 const MainNews = () => {
     return (
         <>
-        
-
             <Container>
+
                 <Title>News</Title>
+                <Subtitle>Updates in Global Education Group</Subtitle>
                 
         
                 <CardviewContainer>
