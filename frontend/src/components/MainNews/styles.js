@@ -1,6 +1,5 @@
 import styled from "styled-components/macro";
-import mainbackground2 from "../../assets/images/mainbackground2.png"
-
+import mainbackground2 from "../../assets/images/mainbackground2.png";
 
 export const Container = styled.div`
   height: 870px;
@@ -12,12 +11,11 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  margin-top:90px;
+  margin-top: 90px;
   margin-bottom: 10px;
   text-align: center;
   color: black;
   font-size: 50px;
-
 `;
 
 export const Subtitle = styled.p`
@@ -28,9 +26,9 @@ export const Subtitle = styled.p`
   text-decoration-thickness: 3px;
   text-decoration-color: #004383;
   margin-bottom: 54px;
-`
+`;
 
-export const CardviewContainer = styled.div` 
+export const CardviewContainer = styled.div`
   width: 80%;
   height: 510px;
   display: flex;
@@ -39,5 +37,4 @@ export const CardviewContainer = styled.div`
   margin-right: 126px;
   justify-content: center;
   align-content: center;
-
-`
+`;

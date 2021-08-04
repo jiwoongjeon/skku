@@ -1,5 +1,5 @@
-import styled from "styled-components/macro"
-import React from "react"
+import styled from "styled-components/macro";
+import React from "react";
 
 export const Container = styled.menu`
   background-color: white;
@@ -7,26 +7,24 @@ export const Container = styled.menu`
   display: flex;
   margin: 10px;
   justify-content: space-between;
-  clear:both;
+  clear: both;
   white-space: pre-wrap;
-   align-items: center;
+  align-items: center;
   padding: 20px;
-`
+`;
 
 export const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 80%;
-
-`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+`;
 export const ContentItem = styled.a`
   font-size: 14px;
-`
+`;
 
 export const Image = styled.img`
   width: 150px;
   height: 63px;
   margin-right: 180px;
-
-`
+`;

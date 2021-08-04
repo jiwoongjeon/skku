@@ -1,12 +1,11 @@
 import { MainNews, Main, MainResearch } from "../../components";
 
-
 const Home = () => {
-  return( 
+  return (
     <>
-    <Main/>
-    <MainNews />
-    <MainResearch/>
+      <Main />
+      <MainNews />
+      <MainResearch />
     </>
   );
 };

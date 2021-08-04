@@ -7,7 +7,7 @@ function App() {
     <Layout>
       <Menu />
       <RenderRoutes routes={ROUTES} />
-      <Footer/>
+      <Footer />
     </Layout>
   );
 }

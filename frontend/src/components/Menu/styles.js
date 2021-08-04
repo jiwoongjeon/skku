@@ -38,7 +38,6 @@ export const MenuItem = styled(Link)`
 `;
 
 export const Title = styled.p`
-
   display: inline-block;
   align-items: center;
   justifiy-content: center;
@@ -46,11 +45,10 @@ export const Title = styled.p`
   text-align: center;
   color: black;
   text-decoration: none;
-`
+`;
 export const Sub = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-
-`
+`;
 // 로고 옆 학교 이름이 정확한 센터에 오지 않음

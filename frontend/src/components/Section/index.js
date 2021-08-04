@@ -1,13 +1,13 @@
-import React from 'react'
-import { Container} from "./styles"
-import { Category } from '../../components'
+import React from "react";
+import { Container } from "./styles";
+import { Category } from "../../components";
 
 const Section = () => {
-    return (
-        <Container>
-            <Category />
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Category />
+    </Container>
+  );
+};
 
-export default Section
+export default Section;

@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
-import { Container, Logo, MenuDiv, MenuItem, Title,Sub } from "./styles";
+import { Container, Logo, MenuDiv, MenuItem, Title, Sub } from "./styles";
 
 const Menu = () => {
   const menuItems = ["About", "K-NESSE", "UICA", "Research", "Board"];
@@ -16,8 +16,7 @@ const Menu = () => {
             <Title>Global Education Group</Title>
           </Link>
         </Sub>
-        
-        
+
         <MenuDiv>
           {menuItems.map((elem, i) => (
             <MenuItem key={i} to={`/${elem.toLowerCase()}`}>
@@ -26,7 +25,7 @@ const Menu = () => {
           ))}
         </MenuDiv>
       </Container>
-      
+
       <Switch>
         <Route path="/"></Route>
       </Switch>

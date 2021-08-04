@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Container, Title, Subtitle, Submenu, MenuItem, ContainerTest, Subcontainer } from "./styles";
+import {
+  Container,
+  Title,
+  Subtitle,
+  Submenu,
+  MenuItem,
+  ContainerTest,
+  Subcontainer,
+} from "./styles";
 
 const Category = () => {
   const menuItems = ["연구소 소개", "조직도", "찾아오시는 길", "기타"];
@@ -10,13 +18,9 @@ const Category = () => {
   };
   return (
     <ContainerTest>
-
       <Subcontainer>
-
-      <Subtitle>Global Leading Education Group</Subtitle>
-      <Title>About</Title>
-      
-
+        <Subtitle>Global Leading Education Group</Subtitle>
+        <Title>About</Title>
       </Subcontainer>
 
       <Submenu>

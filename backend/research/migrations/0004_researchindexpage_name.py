@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('research', '0003_researchindexpage'),
+        ("research", "0003_researchindexpage"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='researchindexpage',
-            name='name',
-            field=models.CharField(default='', max_length=255),
+            model_name="researchindexpage",
+            name="name",
+            field=models.CharField(default="", max_length=255),
         ),
     ]

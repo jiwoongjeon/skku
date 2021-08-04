@@ -26,20 +26,20 @@ export const MenuItem = styled.a`
 `;
 
 export const Subcontainer = styled.div`
-  height:100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-`
+`;
 
-export const Subtitle = styled.p `
-    font-color: black;
-    font-size: 16px;
-    align-items: center;
-`
+export const Subtitle = styled.p`
+  font-color: black;
+  font-size: 16px;
+  align-items: center;
+`;
 
-export const Title = styled.h1 `
-    font-color: black;
-    font-size: 40px;
-`
+export const Title = styled.h1`
+  font-color: black;
+  font-size: 40px;
+`;
