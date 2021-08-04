@@ -20,7 +20,7 @@ function Cardtype1({ title, imgURL, content }) {
 
       <div className="btn">
         <button>
-          <a>View More</a>
+          <a href="/">View More</a>
         </button>
       </div>
     </div>

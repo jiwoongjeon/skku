@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from "react";
 import temp from "../../assets/images/temp.png";
 
 export const Container = styled.div`

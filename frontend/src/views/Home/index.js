@@ -1,10 +1,4 @@
-import {
-  Main,
-  MainResearch,
-  Section,
-  Cardtype1,
-  Cardtype2,
-} from "../../components";
+import { Main, Section, Cardtype1, Cardtype2 } from "../../components";
 import {
   Title,
   Subtitle,
