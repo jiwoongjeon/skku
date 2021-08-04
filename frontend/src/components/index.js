@@ -2,6 +2,7 @@ export { default as Category } from "./Category";
 export { Layout } from "./Layout";
 export { default as List } from "./List";
 export { default as MemberCard } from "./MemberCard";
+export { default as Head } from "./Head";
 export { default as Hero } from "./Hero";
 export { default as Menu } from "./Menu";
 export { default as Main } from "./Main";

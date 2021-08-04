@@ -25,6 +25,8 @@ export const LogoLink = styled(Link)`
 export const Title = styled.p`
   font-size: 30px;
   user-select: none;
+  color: black;
+  font-weight: 600;
 `;
 
 export const Logo = styled.img`
@@ -42,7 +44,8 @@ export const MenuDiv = styled.div`
 export const MenuItem = styled(Link)`
   text-decoration: none;
   user-select: none;
-  font-size: 24px;
+  font-size: 20px;
+  color: black;
 
   &:visited {
     color: black;
