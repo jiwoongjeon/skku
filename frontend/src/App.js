@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Layout, Menu, Category } from "./components";
+import { Footer, Layout, Menu } from "./components";
 import ROUTES, { RenderRoutes } from "./routes";
 
 function App() {

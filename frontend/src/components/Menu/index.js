@@ -1,21 +1,19 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import logo from "../../assets/images/logo.png";
-import { Container, Logo, MenuDiv, MenuItem, Title, Sub } from "./styles";
+import { Container, LogoLink, Logo, MenuDiv, MenuItem, Title } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["About", "K-NESSE", "UICA", "Research", "Board"];
+  const menuItems = ["About", "K-NSSE", "UICA", "Research", "Board"];
 
   return (
     <>
       <Container>
-        <Sub>
-          <Link to="/">
-            <Logo src={logo} />
-            <Title>Global Education Group</Title>
-          </Link>
-        </Sub>
+        <LogoLink to="/">
+          <Logo src={logo} />
+          <Title>Global Education Group</Title>
+        </LogoLink>
 
         <MenuDiv>
           {menuItems.map((elem, i) => (

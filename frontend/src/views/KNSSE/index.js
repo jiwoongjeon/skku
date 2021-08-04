@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { MemberCard } from "../../components";
 import profile from "../../assets/images/profile.jpg";
 
-const KNESSE = () => {
+const KNSSE = () => {
   const members = [
     {
       name: "Gil Dong Hong",
@@ -88,4 +88,4 @@ const KNESSE = () => {
   );
 };
 
-export default KNESSE;
+export default KNSSE;

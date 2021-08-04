@@ -1,30 +1,34 @@
 import styled from "styled-components/macro";
-import React from "react";
 
-export const Container = styled.menu`
-  background-color: white;
+export const Container = styled.footer`
   color: #888888;
   display: flex;
-  margin: 10px;
+  width: 80%;
+  margin: 10px auto;
   justify-content: space-between;
-  clear: both;
-  white-space: pre-wrap;
   align-items: center;
   padding: 20px;
+  flex: 0 0 auto;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: left;
-  width: 80%;
+  gap: 10px;
 `;
-export const ContentItem = styled.a`
+
+export const ContentGroup = styled.div``;
+
+export const Text = styled.p`
+  font-size: 14px;
+  font-weight: 700;
+`;
+
+export const Subtext = styled.p`
   font-size: 14px;
 `;
 
 export const Image = styled.img`
   width: 150px;
   height: 63px;
-  margin-right: 180px;
 `;

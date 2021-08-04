@@ -1,13 +1,15 @@
-import React from "react";
-import { Container } from "./styles";
-import { Category } from "../../components";
+import styled from "styled-components";
 
-const Section = () => {
-  return (
-    <Container>
-      <Category />
-    </Container>
-  );
-};
+const Section = styled.div`
+  ${(props) => {
+    if (props.background) {
+      return `
+        background: url(${props.background}) no-repeat center center fixed;
+        background-size: cover;
+      `;
+    }
+  }}
+  height: ${(props) => props.height}
+`;
 
 export default Section;

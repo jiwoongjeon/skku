@@ -3,12 +3,14 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "./views/Home";
 import About from "./views/About";
-import KNESSE from "./views/KNESSE";
+import KNSSE from "./views/KNSSE";
+import Board from "./views/Board";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  { path: "/k-nesse", key: "K-NESSE", component: () => <KNESSE /> },
+  { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
+  { path: "/board", key: "BOARD", component: () => <Board /> },
 ];
 
 export default ROUTES;
