@@ -29,10 +29,7 @@ export const Title = styled.p`
   font-weight: 600;
 `;
 
-export const Logo = styled.img`
-  width: 54px;
-  height: 34px;
-`;
+export const Logo = styled.img``;
 
 export const MenuDiv = styled.div`
   display: flex;

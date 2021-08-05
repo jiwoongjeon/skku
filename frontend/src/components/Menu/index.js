@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import { Container, LogoLink, Logo, MenuDiv, MenuItem, Title } from "./styles";
 
 const Menu = () => {
