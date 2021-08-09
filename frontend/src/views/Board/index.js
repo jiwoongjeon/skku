@@ -1,7 +1,7 @@
 import React from "react";
 
 import background from "../../assets/images/mainbackground.png";
-import { Section } from "../../components";
+import { Hero, Main } from "../../components";
 import {
   Container,
   Table,
@@ -9,6 +9,7 @@ import {
   HeaderRow,
   HeaderColumn,
   Column,
+  Title,
 } from "./components/Table";
 
 const boardData = [
@@ -39,32 +40,40 @@ const boardData = [
 ];
 
 const Board = () => {
+  const heroHeight = Math.min(window.innerWidth / 2, 400);
   return (
-    <>
-      <Section background={background} height={"300px"} />
+    <Main>
+      <Hero background={background} height={`${heroHeight}px`} />
       <Container>
+        <Title>Notice</Title>
         <Table>
-          <col style={{ width: "10%" }} />
-          <col style={{ width: "60%" }} />
-          <col style={{ width: "15%" }} />
-          <col style={{ width: "15%" }} />
-          <HeaderRow>
-            <HeaderColumn>번호</HeaderColumn>
-            <HeaderColumn>제목</HeaderColumn>
-            <HeaderColumn>날짜</HeaderColumn>
-            <HeaderColumn>작성자</HeaderColumn>
-          </HeaderRow>
-          {boardData.map((data) => (
-            <Row>
-              <Column>{data.postId}</Column>
-              <Column textAlign={"left"}>{data.postTitle}</Column>
-              <Column>{data.postDate}</Column>
-              <Column>{data.postAuthor}</Column>
-            </Row>
-          ))}
+          <colgroup>
+            <col style={{ width: "10%" }} />
+            <col style={{ width: "60%" }} />
+            <col style={{ width: "15%" }} />
+            <col style={{ width: "15%" }} />
+          </colgroup>
+          <thead>
+            <HeaderRow>
+              <HeaderColumn>번호</HeaderColumn>
+              <HeaderColumn>제목</HeaderColumn>
+              <HeaderColumn>날짜</HeaderColumn>
+              <HeaderColumn>작성자</HeaderColumn>
+            </HeaderRow>
+          </thead>
+          <tbody>
+            {boardData.map((data) => (
+              <Row key={data.postId}>
+                <Column>{data.postId}</Column>
+                <Column textAlign={"left"}>{data.postTitle}</Column>
+                <Column>{data.postDate}</Column>
+                <Column>{data.postAuthor}</Column>
+              </Row>
+            ))}
+          </tbody>
         </Table>
       </Container>
-    </>
+    </Main>
   );
 };
 

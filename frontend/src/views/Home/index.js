@@ -66,8 +66,9 @@ const Home = () => {
           <SectionTitle>News</SectionTitle>
           <SectionSubtitle>Updates in Global Education Group</SectionSubtitle>
           <CardviewContainer>
-            {cardData.map((data) => (
+            {cardData.map((data, i) => (
               <Cardtype1
+                key={i}
                 imgURL={data.imgUrl}
                 title={data.title}
                 content={data.content}

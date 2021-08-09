@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 50px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 3% auto;
+  min-width: 80%;
+`;
+
+export const Title = styled.h1`
+  font-size: var(--font-size-7);
 `;
 
 export const Table = styled.table`
-  margin: 0 auto;
-  width: 80%;
   border-collapse: collapse;
 `;
 

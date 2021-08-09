@@ -3,32 +3,31 @@ import styled from "styled-components/macro";
 export const Container = styled.footer`
   color: #888888;
   display: flex;
-  width: 80%;
-  margin: 10px auto;
+  width: 95%;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   flex: 0 0 auto;
+  padding: 20px 0;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 `;
 
 export const ContentGroup = styled.div``;
 
 export const Text = styled.p`
-  font-size: 14px;
+  font-size: var(--font-size-2);
   font-weight: 700;
 `;
 
 export const Subtext = styled.p`
-  font-size: 14px;
+  font-size: var(--font-size-2);
 `;
 
 export const Image = styled.img`
-  width: 150px;
-  height: 63px;
+  max-width: 150px;
 `;
