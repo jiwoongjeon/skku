@@ -9,6 +9,11 @@ export const Container = styled.div`
   }
 `;
 
+export const SubContainerBoard = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const Title = styled.p`
   color: black;
   font-size: var(--font-size-8);

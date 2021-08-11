@@ -9,35 +9,76 @@ import {
   ButtonContainer,
   SectionTitle,
   SectionSubtitle,
+  SubContainerBoard,
 } from "./styles";
+
+import {
+  ContainerBoard,
+  Table,
+  Row,
+  HeaderRow,
+  HeaderColumn,
+  Column,
+} from "../Board/components/Table";
 
 import background from "../../assets/images/mainbackground.png";
 import background2 from "../../assets/images/mainbackground2.png";
 import background3 from "../../assets/images/mainbackground3.png";
 
-const cardData = [
+// const cardData = [
+//   {
+//     imgUrl:
+//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
+//     title: "Title",
+//     content:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+//   },
+//   {
+//     imgUrl:
+//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
+//     title: "Title",
+//     content:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+//   },
+//   {
+//     imgUrl:
+//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
+//     title: "Title",
+//     content:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+//   },
+// ];
+
+const boardData = [
   {
-    imgUrl:
-      "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-    title: "Title",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+    postId: 1,
+    postTitle: "Title",
+    postDate: "2021-08-1",
+    postAuthor: "관리자",
   },
   {
-    imgUrl:
-      "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-    title: "Title",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+    postId: 2,
+    postTitle: "Title",
+    postDate: "2021-08-2",
+    postAuthor: "관리자",
   },
   {
-    imgUrl:
-      "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-    title: "Title",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
+    postId: 3,
+    postTitle: "Title",
+    postDate: "2021-08-3",
+    postAuthor: "관리자",
+  },
+  {
+    postId: 4,
+    postTitle: "Title",
+    postDate: "2021-08-4",
+    postAuthor: "관리자",
   },
 ];
+
+const greeting = function greet() {
+  console.log("Hey there clicker!");
+};
 
 const Home = () => {
   return (
@@ -56,7 +97,7 @@ const Home = () => {
           </Content>
           <Content>Learn more about</Content>
           <ButtonContainer>
-            <Button>K-NSSE</Button>
+            <Button onClick={() => greeting()}>K-NSSE</Button>
             <Button>UICA</Button>
           </ButtonContainer>
         </Container>
@@ -65,8 +106,8 @@ const Home = () => {
         <Container>
           <SectionTitle>News</SectionTitle>
           <SectionSubtitle>Updates in Global Education Group</SectionSubtitle>
-          <CardviewContainer>
-            {cardData.map((data, i) => (
+          {/* <CardviewContainer>
+            {cardData.map((data) => (
               <Cardtype1
                 key={i}
                 imgURL={data.imgUrl}
@@ -74,7 +115,54 @@ const Home = () => {
                 content={data.content}
               />
             ))}
-          </CardviewContainer>
+          </CardviewContainer> */}
+          <SubContainerBoard>
+            <ContainerBoard>
+              <Table>
+                <col style={{ width: "10%" }} />
+                <col style={{ width: "60%" }} />
+                <col style={{ width: "15%" }} />
+                <col style={{ width: "15%" }} />
+                <HeaderRow>
+                  <HeaderColumn>번호</HeaderColumn>
+                  <HeaderColumn>제목</HeaderColumn>
+                  <HeaderColumn>날짜</HeaderColumn>
+                  <HeaderColumn>작성자</HeaderColumn>
+                </HeaderRow>
+                {boardData.map((data) => (
+                  <Row>
+                    <Column>{data.postId}</Column>
+                    <Column textAlign={"left"}>{data.postTitle}</Column>
+                    <Column>{data.postDate}</Column>
+                    <Column>{data.postAuthor}</Column>
+                  </Row>
+                ))}
+              </Table>
+            </ContainerBoard>
+
+            <ContainerBoard>
+              <Table>
+                <col style={{ width: "10%" }} />
+                <col style={{ width: "60%" }} />
+                <col style={{ width: "15%" }} />
+                <col style={{ width: "15%" }} />
+                <HeaderRow>
+                  <HeaderColumn>번호</HeaderColumn>
+                  <HeaderColumn>제목</HeaderColumn>
+                  <HeaderColumn>날짜</HeaderColumn>
+                  <HeaderColumn>작성자</HeaderColumn>
+                </HeaderRow>
+                {boardData.map((data) => (
+                  <Row>
+                    <Column>{data.postId}</Column>
+                    <Column textAlign={"left"}>{data.postTitle}</Column>
+                    <Column>{data.postDate}</Column>
+                    <Column>{data.postAuthor}</Column>
+                  </Row>
+                ))}
+              </Table>
+            </ContainerBoard>
+          </SubContainerBoard>
         </Container>
       </Section>
       <Section background={background3}>

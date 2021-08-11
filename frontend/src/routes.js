@@ -5,12 +5,14 @@ import Home from "./views/Home";
 import About from "./views/About";
 import KNSSE from "./views/KNSSE";
 import Board from "./views/Board";
+import UICA from "./views/UICA";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
   { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
   { path: "/board", key: "BOARD", component: () => <Board /> },
+  { path: "/uica", key: "UICA", component: () => <UICA /> },
 ];
 
 export default ROUTES;

@@ -44,11 +44,25 @@ export const Logo = styled.img`
   }
 `;
 
-export const MenuDiv = styled.div`
+export const MenuBox = styled.div`
+  visiblity: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  margin-top: 25px;
+  width: 100%;
+  height: 170px;
+  background-color: rgba(0, 68, 131, 0.75);
+`;
+
+export const MenuWrapper = styled.div`
+  width: 60%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 30px;
+
+  &:hover ${MenuBox} {
+    visiblity: visible;
+    opacity: 1;
+  }
 `;
 
 export const MenuItem = styled(Link)`
@@ -60,7 +74,6 @@ export const MenuItem = styled(Link)`
   &:visited {
     color: black;
   }
-
   @media only screen and (max-width: 1200px) {
     font-size: var(--font-size-3);
   }

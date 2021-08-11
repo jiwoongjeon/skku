@@ -4,6 +4,7 @@ import background from "../../assets/images/mainbackground.png";
 import { Hero, Main } from "../../components";
 import {
   Container,
+  ContainerBoard,
   Table,
   Row,
   HeaderRow,

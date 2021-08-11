@@ -11,6 +11,11 @@ export const Title = styled.h1`
   font-size: var(--font-size-7);
 `;
 
+export const ContainerBoard = styled.div`
+  margin-top: 50px;
+  width: 70%;
+`;
+
 export const Table = styled.table`
   border-collapse: collapse;
 `;
