@@ -3,16 +3,26 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "./views/Home";
 import About from "./views/About";
-import KNSSE from "./views/KNSSE";
+import EDUComponent from "./views/EDUUPDATE";
 import Board from "./views/Board";
-import UICA from "./views/UICA";
+import KNSSEUPDATE from "./views/KNSSEUPDATE";
+import UICAUPDATE from "./views/UICAUPDATE";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  { path: "/k-nsse", key: "K-NSSE", component: () => <KNSSE /> },
+  {
+    path: "/education/knsse",
+    key: "EDUCATION",
+    component: () => <KNSSEUPDATE />,
+  }, //exact
+  {
+    path: "/education/uica",
+    key: "EDUCATION",
+    component: () => <UICAUPDATE />,
+  },
+  { path: "/education", key: "EDUCATION", component: () => <EDUComponent /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
   { path: "/board", key: "BOARD", component: () => <Board /> },
-  { path: "/uica", key: "UICA", component: () => <UICA /> },
 ];
 
 export default ROUTES;
