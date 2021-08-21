@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Image, Content, ContentContainer, Title } from "./styles";
+import imgsrc from "../../assets/images/temp.png";
 
 const Card = ({ data, cardIndex }) => {
   return (
@@ -7,11 +8,14 @@ const Card = ({ data, cardIndex }) => {
       {data[cardIndex].map((item) => (
         <>
           <Container>
-            <Image src={item.bg} alt="" />
-            <ContentContainer>
-              <Title>{item.title}</Title>
-              <Content>{item.name}</Content>
-            </ContentContainer>
+            <Title> 1. Title</Title>
+            <Content> txt</Content>
+
+            <Title>2. Title</Title>
+            <Image src={imgsrc} alt=""></Image>
+
+            <Title>3. Title</Title>
+            <Image src={imgsrc} alt=""></Image>
           </Container>
         </>
       ))}

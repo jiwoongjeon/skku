@@ -18,7 +18,6 @@ const KNSSE = () => {
           <Button onClick={() => setActive("FirstCard")}>진단도구 소개</Button>
           <Button onClick={() => setActive("SecondCard")}>멤버쉽 제도</Button>
           <Button onClick={() => setActive("ThirdCard")}>참여신청</Button>{" "}
-          //새로운페이지로 이동
         </ButtonContainer>
         <div>
           {active === "FirstCard" && <Card data={Data} cardIndex={0} />}

@@ -8,18 +8,21 @@ import {
   Button,
   ButtonContainer,
   SectionTitle,
+  SectionTitle2,
   SectionSubtitle,
+  SectionSubtitle2,
   SubContainerBoard,
 } from "./styles";
 
 import {
-  ContainerBoard,
-  Table,
+  ContainerBoardHome,
   Row,
   HeaderRow,
   HeaderColumn,
   Column,
-} from "../Board/components/Table";
+  TableHome1,
+  TableHome2,
+} from "../B_Announcement/components/Table";
 
 import background from "../../assets/images/mainbackground.png";
 import background2 from "../../assets/images/mainbackground2.png";
@@ -106,6 +109,7 @@ const Home = () => {
         <Container>
           <SectionTitle>News</SectionTitle>
           <SectionSubtitle>Updates in Global Education Group</SectionSubtitle>
+
           {/* <CardviewContainer>
             {cardData.map((data) => (
               <Cardtype1
@@ -116,32 +120,10 @@ const Home = () => {
               />
             ))}
           </CardviewContainer> */}
-          <SubContainerBoard>
-            <ContainerBoard>
-              <Table>
-                <col style={{ width: "10%" }} />
-                <col style={{ width: "60%" }} />
-                <col style={{ width: "15%" }} />
-                <col style={{ width: "15%" }} />
-                <HeaderRow>
-                  <HeaderColumn>번호</HeaderColumn>
-                  <HeaderColumn>제목</HeaderColumn>
-                  <HeaderColumn>날짜</HeaderColumn>
-                  <HeaderColumn>작성자</HeaderColumn>
-                </HeaderRow>
-                {boardData.map((data) => (
-                  <Row>
-                    <Column>{data.postId}</Column>
-                    <Column textAlign={"left"}>{data.postTitle}</Column>
-                    <Column>{data.postDate}</Column>
-                    <Column>{data.postAuthor}</Column>
-                  </Row>
-                ))}
-              </Table>
-            </ContainerBoard>
 
-            <ContainerBoard>
-              <Table>
+          <SubContainerBoard>
+            <ContainerBoardHome>
+              <TableHome1>
                 <col style={{ width: "10%" }} />
                 <col style={{ width: "60%" }} />
                 <col style={{ width: "15%" }} />
@@ -160,30 +142,55 @@ const Home = () => {
                     <Column>{data.postAuthor}</Column>
                   </Row>
                 ))}
-              </Table>
-            </ContainerBoard>
+              </TableHome1>
+            </ContainerBoardHome>
+
+            <ContainerBoardHome>
+              <TableHome2>
+                <col style={{ width: "10%" }} />
+                <col style={{ width: "60%" }} />
+                <col style={{ width: "15%" }} />
+                <col style={{ width: "15%" }} />
+                <HeaderRow>
+                  <HeaderColumn>번호</HeaderColumn>
+                  <HeaderColumn>제목</HeaderColumn>
+                  <HeaderColumn>날짜</HeaderColumn>
+                  <HeaderColumn>작성자</HeaderColumn>
+                </HeaderRow>
+                {boardData.map((data) => (
+                  <Row>
+                    <Column>{data.postId}</Column>
+                    <Column textAlign={"left"}>{data.postTitle}</Column>
+                    <Column>{data.postDate}</Column>
+                    <Column>{data.postAuthor}</Column>
+                  </Row>
+                ))}
+              </TableHome2>
+            </ContainerBoardHome>
           </SubContainerBoard>
         </Container>
       </Section>
       <Section background={background3}>
         <Container>
-          <SectionTitle>Research</SectionTitle>
-          <SectionSubtitle>
+          <SectionTitle2>Research</SectionTitle2>
+          <SectionSubtitle2>
             Achieve what we made in Global Education Group
-          </SectionSubtitle>
-          <CardviewContainer>
-            <Cardtype2
-              imgURL="http://images.unsplash.com/photo-1593642532400-2682810df593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjI2OTQxMTQy&ixlib=rb-1.2.1&q=80&w=1080"
-              title="Title"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa."
-            ></Cardtype2>
+          </SectionSubtitle2>
+          <SubContainerBoard>
+            <CardviewContainer>
+              <Cardtype2
+                imgURL="http://images.unsplash.com/photo-1593642532400-2682810df593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjI2OTQxMTQy&ixlib=rb-1.2.1&q=80&w=1080"
+                title="Title"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa."
+              ></Cardtype2>
 
-            <Cardtype2
-              imgUrl=""
-              title="Title"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa."
-            ></Cardtype2>
-          </CardviewContainer>
+              <Cardtype2
+                imgUrl=""
+                title="Title"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa."
+              ></Cardtype2>
+            </CardviewContainer>
+          </SubContainerBoard>
         </Container>
       </Section>
     </Main>

@@ -18,7 +18,7 @@ import {
 } from "./styles";
 
 const Menu = () => {
-  const menuItems = ["About", "Research", "Education", "게시판"];
+  const menuItems = ["About", "Research", "Education", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setOpen] = useState(false);
   const updateDimensions = () => {

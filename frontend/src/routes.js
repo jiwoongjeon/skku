@@ -3,10 +3,13 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "./views/Home";
 import About from "./views/About";
+import R_Research from "./views/R_Research";
+import R_About from "./views/R_About";
 import EDUComponent from "./views/EDUUPDATE";
-import Board from "./views/Board";
 import KNSSEUPDATE from "./views/KNSSEUPDATE";
 import UICAUPDATE from "./views/UICAUPDATE";
+import B_Files from "./views/B_Files";
+import B_Announcement from "./views/B_Announcement";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
@@ -22,7 +25,10 @@ const ROUTES = [
   },
   { path: "/education", key: "EDUCATION", component: () => <EDUComponent /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
-  { path: "/board", key: "BOARD", component: () => <Board /> },
+  { path: "/research/about", key: "RESEARCH", component: () => <R_About /> },
+  { path: "/research", key: "RESEARCH", component: () => <R_Research /> },
+  { path: "/board/files", key: "FILES", component: () => <B_Files /> },
+  { path: "/board", key: "BOARD", component: () => <B_Announcement /> },
 ];
 
 export default ROUTES;

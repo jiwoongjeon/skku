@@ -20,12 +20,18 @@ export const Button = styled.button`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 100%;
   height: 50px;
   display: flex;
   flex-direction: row;
   padding: 25px;
   margin-left: 25px;
+`;
+
+export const BPContainer = styled.div`
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
 `;
 
 export const card = styled.div`
@@ -34,19 +40,24 @@ export const card = styled.div`
   padding: 20px;
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
+  margin-left: 69px;
   width: 50%;
   height: 600px;
-  padding: 20px;
-  background: url(${temp}) center/100% no-repeat;
 `;
 
 export const Container = styled.div`
   width: 100%;
-  height: 600px;
-  background-color: grey;
+  background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+`;
+
+export const ImageCentered = styled.div`
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
 `;
 
 export const ContentContainer = styled.div`
@@ -58,7 +69,6 @@ export const ContentContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  margin-top: 176px;
   margin-bottom: 35px;
   margin-left: 69px;
   margin-right: 60px;

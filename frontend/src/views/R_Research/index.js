@@ -3,8 +3,8 @@ import React from "react";
 import background from "../../assets/images/mainbackground.png";
 import { Hero, Main } from "../../components";
 import {
-  Container,
-  ContainerBoard,
+  ContainerB,
+  ContainerBoarding,
   Table,
   Row,
   HeaderRow,
@@ -40,13 +40,13 @@ const boardData = [
   },
 ];
 
-const Board = () => {
+const Research = () => {
   const heroHeight = Math.min(window.innerWidth / 2, 400);
   return (
     <Main>
       <Hero background={background} height={`${heroHeight}px`} />
-      <Container>
-        <Title>Notice</Title>
+      <ContainerB>
+        <Title>Reaeach</Title>
         <Table>
           <colgroup>
             <col style={{ width: "10%" }} />
@@ -73,9 +73,9 @@ const Board = () => {
             ))}
           </tbody>
         </Table>
-      </Container>
+      </ContainerB>
     </Main>
   );
 };
 
-export default Board;
+export default Research;

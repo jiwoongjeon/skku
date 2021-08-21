@@ -2,9 +2,7 @@ import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
 export const MenuDrop = styled.div`
-  visiblity: hidden;
-  opacity: 0;
-  display: flex;
+  display: none;
   transition: 0.2s ease-in-out;
   position: absolute;
   flex-direction: row;
@@ -18,7 +16,6 @@ export const MenuDrop = styled.div`
 export const Container = styled.nav`
   width: 100%;
   margin: 0 auto;
-
   height: 70px;
   display: flex;
   align-items: center;
@@ -26,12 +23,12 @@ export const Container = styled.nav`
   flex: 0 0 auto;
   z-index: 1000;
   &:hover ${MenuDrop} {
-    visiblity: visible;
-    opacity: 1;
+    display: flex;
   }
 `;
 
 export const LogoLink = styled(Link)`
+  margin-left: 50px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -114,6 +111,11 @@ export const MenuScreen = styled.div`
   top: 0px;
   padding-top: 70px;
   background-color: white;
+
+  &:hover ${MenuDrop} {
+    visiblity: visible;
+    opacity: 1;
+  }
 `;
 
 export const MenuScreenContainer = styled.div`

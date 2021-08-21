@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 80%;
   margin: 10% auto;
-
   @media only screen and (max-width: 960px) {
     max-width: 90%;
   }
 `;
 
 export const SubContainerBoard = styled.div`
+  justify-content: center;
   display: flex;
   flex-direction: row;
 `;
@@ -80,6 +80,14 @@ export const SectionTitle = styled.p`
   user-select: none;
 `;
 
+export const SectionTitle2 = styled.p`
+  margin-top: 20px;
+  text-align: center;
+  font-size: var(--font-size-8);
+  user-select: none;
+  color: white;
+`;
+
 export const SectionSubtitle = styled.p`
   text-align: center;
   font-size: var(--font-size-4);
@@ -88,8 +96,18 @@ export const SectionSubtitle = styled.p`
   user-select: none;
 `;
 
+export const SectionSubtitle2 = styled.p`
+  text-align: center;
+  font-size: var(--font-size-4);
+  text-decoration: overline #004383 solid 2px;
+  margin-bottom: 50px;
+  user-select: none;
+  color: white;
+`;
+
 export const CardviewContainer = styled.div`
   height: 510px;
+  width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
