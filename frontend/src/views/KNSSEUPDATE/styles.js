@@ -17,6 +17,12 @@ export const Button = styled.button`
   radius: 10px;
   border: none;
   border-radius: 4px;
+  transition: 0.4s;
+
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 0px 0px 0 rgba(0, 0, 0, 0.19);
+  }
 `;
 
 export const ButtonContainer = styled.div`

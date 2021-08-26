@@ -46,7 +46,7 @@ const Board = () => {
     <Main>
       <Hero background={background} height={`${heroHeight}px`} />
       <ContainerB>
-        <Title>Notice</Title>
+        <Title>Announcement</Title>
         <Table>
           <colgroup>
             <col style={{ width: "10%" }} />

@@ -17,7 +17,11 @@ const UICA = () => {
         <ButtonContainer>
           <Button onClick={() => setActive("FirstCard")}>진단도구 소개</Button>
           <Button onClick={() => setActive("SecondCard")}>멤버쉽 제도</Button>
-          <Button onClick={() => setActive("ThirdCard")}>참여신청</Button>{" "}
+          <Button
+            onClick={() => window.open("https://www.naver.com", "_blank")}
+          >
+            참여신청
+          </Button>
         </ButtonContainer>
         <div>
           {active === "FirstCard" && <Card data={Data} cardIndex={0} />}

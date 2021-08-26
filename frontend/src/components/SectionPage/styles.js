@@ -4,7 +4,6 @@ import temp from "../../assets/images/temp.png";
 export const Container = styled.div`
   width: 100%;
   height: 600px;
-  background-color: grey;
   display: flex;
   flex-direction: row;
 `;

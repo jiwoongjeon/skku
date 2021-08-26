@@ -31,7 +31,7 @@ export const ContainerBoard = styled.div`
 
 export const ContainerBoardHome = styled.div`
   margin-top: 50px;
-  margin: 10px;
+  margin: 20px;
 `;
 
 export const Table = styled.table`
@@ -40,12 +40,12 @@ export const Table = styled.table`
 `;
 
 export const TableHome1 = styled.table`
-  width: 576px;
+  width: 676px;
   background-color: #f3f3f3;
   border-radius: 10px;
 `;
 export const TableHome2 = styled.table`
-  width: 576px;
+  width: 676px;
   background-color: #4978a5;
   color: white;
   border-radius: 10px;

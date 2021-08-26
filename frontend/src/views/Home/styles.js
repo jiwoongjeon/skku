@@ -60,16 +60,22 @@ export const Button = styled.button`
   width: 188px;
   height: 60px;
   justify-content: center;
-  background: black;
+  background: #002d57;
   color: white;
   font-size: var(--font-size-5);
-  border: none;
+  border: #002d57;
   border-radius: 5px;
+  transition-duration: 0.4s;
 
   @media only screen and (max-width: 960px) {
     font-size: var(--font-size-3);
     width: 94px;
     height: 50px;
+  }
+
+  &:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
 `;
 
@@ -107,7 +113,7 @@ export const SectionSubtitle2 = styled.p`
 
 export const CardviewContainer = styled.div`
   height: 510px;
-  width: 1200px;
+  width: 1300px;
   display: flex;
   flex-direction: row;
   justify-content: center;

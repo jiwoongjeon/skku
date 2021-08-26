@@ -46,7 +46,7 @@ const Research = () => {
     <Main>
       <Hero background={background} height={`${heroHeight}px`} />
       <ContainerB>
-        <Title>Reaeach</Title>
+        <Title>Research</Title>
         <Table>
           <colgroup>
             <col style={{ width: "10%" }} />
