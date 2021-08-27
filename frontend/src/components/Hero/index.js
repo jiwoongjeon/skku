@@ -1,10 +1,27 @@
-import styled from "styled-components";
+import React from "react";
 
-import BackgroundImage from "../../assets/images/mainbackground.png";
+import {
+  HeroContainer,
+  Title,
+  Subtitle,
+  SectionsContainer,
+  SectionsItem,
+} from "./styles";
 
-const Background = styled.div`
-  background: url(${BackgroundImage}) center/cover no-repeat;
-  height: ${(props) => props.height};
-`;
+const Hero = ({ title, sections, focusedSection, ...restProps }) => {
+  return (
+    <HeroContainer {...restProps}>
+      <Subtitle>Global Leading Education Group</Subtitle>
+      <Title>{title}</Title>
+      <SectionsContainer>
+        {sections.map((section) => (
+          <SectionsItem focused={section === focusedSection}>
+            {section}
+          </SectionsItem>
+        ))}
+      </SectionsContainer>
+    </HeroContainer>
+  );
+};
 
-export default Background;
+export default Hero;

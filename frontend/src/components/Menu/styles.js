@@ -105,8 +105,8 @@ export const MenuItem = styled(Link)`
 
 export const MenuScreen = styled.div`
   width: 100%;
-  transition: height 0.4s;
-  height: ${(props) => (props.height ? "100%" : "0px")};
+  transition: height 0.4s ease-in-out;
+  height: ${(props) => (props.isopen ? "100%" : "0px")};
   position: absolute;
   top: 0px;
   padding-top: 70px;
@@ -124,9 +124,9 @@ export const MenuScreenContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 15px;
+`;
 
-  > ${MenuItem} {
-    margin: 5px 0;
-    font-size: var(--font-size-5);
-  }
+export const MenuScreenItem = styled(MenuItem)`
+  margin: 5px 0;
+  font-size: var(--font-size-5);
 `;

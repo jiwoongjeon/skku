@@ -15,15 +15,18 @@ import {
   Title,
   MenuScreen,
   MenuScreenContainer,
+  MenuScreenItem,
 } from "./styles";
 
 const Menu = () => {
   const menuItems = ["About", "Research", "Education", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
   const [isOpen, setOpen] = useState(false);
+
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
+
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
@@ -47,17 +50,17 @@ const Menu = () => {
 
   return (
     <>
-      <MenuScreen height={isOpen}>
+      <MenuScreen isopen={isOpen ? 1 : 0}>
         {isOpen && (
           <MenuScreenContainer>
             {menuItems.map((elem, i) => (
-              <MenuItem
+              <MenuScreenItem
                 key={i}
                 onClick={handleItemClick}
                 to={`/${elem.toLowerCase()}`}
               >
                 {elem}
-              </MenuItem>
+              </MenuScreenItem>
             ))}
           </MenuScreenContainer>
         )}
