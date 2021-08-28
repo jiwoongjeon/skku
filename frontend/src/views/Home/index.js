@@ -28,30 +28,6 @@ import background from "../../assets/images/mainbackground.png";
 import background2 from "../../assets/images/mainbackground2.png";
 import background3 from "../../assets/images/mainbackground3.png";
 
-// const cardData = [
-//   {
-//     imgUrl:
-//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-//     title: "Title",
-//     content:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
-//   },
-//   {
-//     imgUrl:
-//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-//     title: "Title",
-//     content:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
-//   },
-//   {
-//     imgUrl:
-//       "https://d1vcqlflm6aitx.cloudfront.net/images/800x100p/1557364192-work_while_you_study_banner.webp",
-//     title: "Title",
-//     content:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massadddddsnfjanfkasdnfkandsjknfaksfnjkLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar non vestibulum consectetur nunc ac vel sollicitudin maecenas. Euismod aliquet urna metus, eget nam ornare mattis massa.",
-//   },
-// ];
-
 const boardData = [
   {
     postId: 1,
@@ -109,25 +85,15 @@ const Home = () => {
         <Container>
           <SectionTitle>News</SectionTitle>
           <SectionSubtitle>Updates in Global Education Group</SectionSubtitle>
-
-          {/* <CardviewContainer>
-            {cardData.map((data) => (
-              <Cardtype1
-                key={i}
-                imgURL={data.imgUrl}
-                title={data.title}
-                content={data.content}
-              />
-            ))}
-          </CardviewContainer> */}
-
           <SubContainerBoard>
             <ContainerBoardHome>
               <TableHome1>
-                <col style={{ width: "10%" }} />
-                <col style={{ width: "60%" }} />
-                <col style={{ width: "15%" }} />
-                <col style={{ width: "15%" }} />
+                <colgroup>
+                  <col style={{ width: "10%" }} />
+                  <col style={{ width: "60%" }} />
+                  <col style={{ width: "15%" }} />
+                  <col style={{ width: "15%" }} />
+                </colgroup>
                 <HeaderRow>
                   <HeaderColumn>번호</HeaderColumn>
                   <HeaderColumn>제목</HeaderColumn>
@@ -135,7 +101,7 @@ const Home = () => {
                   <HeaderColumn>작성자</HeaderColumn>
                 </HeaderRow>
                 {boardData.map((data) => (
-                  <Row>
+                  <Row key={data.postId}>
                     <Column>{data.postId}</Column>
                     <Column textAlign={"left"}>{data.postTitle}</Column>
                     <Column>{data.postDate}</Column>
@@ -147,10 +113,12 @@ const Home = () => {
 
             <ContainerBoardHome>
               <TableHome2>
-                <col style={{ width: "10%" }} />
-                <col style={{ width: "60%" }} />
-                <col style={{ width: "15%" }} />
-                <col style={{ width: "15%" }} />
+                <colgroup>
+                  <col style={{ width: "10%" }} />
+                  <col style={{ width: "60%" }} />
+                  <col style={{ width: "15%" }} />
+                  <col style={{ width: "15%" }} />
+                </colgroup>
                 <HeaderRow>
                   <HeaderColumn>번호</HeaderColumn>
                   <HeaderColumn>제목</HeaderColumn>
@@ -158,7 +126,7 @@ const Home = () => {
                   <HeaderColumn>작성자</HeaderColumn>
                 </HeaderRow>
                 {boardData.map((data) => (
-                  <Row>
+                  <Row key={data.postId}>
                     <Column>{data.postId}</Column>
                     <Column textAlign={"left"}>{data.postTitle}</Column>
                     <Column>{data.postDate}</Column>

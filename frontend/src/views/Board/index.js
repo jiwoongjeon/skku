@@ -1,17 +1,16 @@
 import React from "react";
+import { Hero, Main } from "../../components";
 
 import background from "../../assets/images/mainbackground.png";
-import { Hero, Main } from "../../components";
 import {
-  ContainerB,
-  ContainerBoarding,
-  Table,
-  Row,
-  HeaderRow,
-  HeaderColumn,
   Column,
+  ContainerB,
+  HeaderColumn,
+  HeaderRow,
+  Row,
+  Table,
   Title,
-} from "./components/Table";
+} from "../../components/Table";
 
 const boardData = [
   {
@@ -40,11 +39,18 @@ const boardData = [
   },
 ];
 
-const Board = () => {
+const Board = ({ section }) => {
   const heroHeight = Math.min(window.innerWidth / 2, 400);
+
   return (
     <Main>
-      <Hero background={background} height={`${heroHeight}px`} />
+      <Hero
+        title={"Board"}
+        sections={["Notice", "Files"]}
+        focusedSection={section}
+        background={background}
+        height={`${heroHeight}px`}
+      />
       <ContainerB>
         <Title>Announcement</Title>
         <Table>
@@ -66,7 +72,7 @@ const Board = () => {
             {boardData.map((data) => (
               <Row key={data.postId}>
                 <Column>{data.postId}</Column>
-                <Column textAlign={"left"}>{data.postTitle}</Column>
+                <Column>{data.postTitle}</Column>
                 <Column>{data.postDate}</Column>
                 <Column>{data.postAuthor}</Column>
               </Row>

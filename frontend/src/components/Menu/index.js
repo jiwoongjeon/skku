@@ -9,19 +9,30 @@ import {
   Logo,
   MenuDiv,
   MenuItem,
-  MenuDrop,
-  MenuContent,
-  MenuBox,
   Title,
   MenuScreen,
   MenuScreenContainer,
   MenuScreenItem,
+  HamburgerDiv,
 } from "./styles";
+import {
+  DropdownContainer,
+  DropdownMenu,
+  DropdownMenuGroup,
+  DropdownMenuLink,
+} from "./Dropdown";
+
+const menuItems = {
+  About: ["Organization", "Leader", "Members"],
+  Research: ["About", "Publications"],
+  Education: ["About", "K-NSSE", "UICA"],
+  Board: ["Notice", "Files"],
+};
 
 const Menu = () => {
-  const menuItems = ["About", "Research", "Education", "Board"];
   const [width, setWidth] = useState(window.innerWidth);
-  const [isOpen, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const updateDimensions = () => {
     setWidth(window.innerWidth);
@@ -41,11 +52,19 @@ const Menu = () => {
   }, [isOpen]);
 
   const handleClick = () => {
-    setOpen((prevIsOpen) => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   const handleItemClick = () => {
-    setOpen(false);
+    setIsOpen(false);
+  };
+
+  const toggleDropdownOn = () => {
+    setDropdownOpen(true);
+  };
+
+  const toggleDropdownOff = () => {
+    setDropdownOpen(false);
   };
 
   return (
@@ -53,7 +72,7 @@ const Menu = () => {
       <MenuScreen isopen={isOpen ? 1 : 0}>
         {isOpen && (
           <MenuScreenContainer>
-            {menuItems.map((elem, i) => (
+            {Object.keys(menuItems).map((elem, i) => (
               <MenuScreenItem
                 key={i}
                 onClick={handleItemClick}
@@ -71,41 +90,16 @@ const Menu = () => {
           <Title>Global Education Group</Title>
         </LogoLink>
         {width >= 960 ? (
-          <>
-            <MenuDiv>
-              {menuItems.map((elem, i) => (
-                <MenuItem key={i} to={`/${elem.toLowerCase()}`}>
-                  {elem}
-                </MenuItem>
-              ))}
-            </MenuDiv>
-            <MenuDrop>
-              <MenuBox>
-                <MenuContent to="/about/organization">Organization</MenuContent>
-                <MenuContent to="/about/leader">Leader</MenuContent>
-                <MenuContent to="/about/members">Members</MenuContent>
-              </MenuBox>
-
-              <MenuBox>
-                <MenuContent to="/research/about">About</MenuContent>
-                <MenuContent to="/research/research">research</MenuContent>
-              </MenuBox>
-
-              <MenuBox>
-                <MenuContent to="/education/about">About</MenuContent>
-                <MenuContent to="/education/knsse">K-NSSE</MenuContent>
-                <MenuContent to="/education/uica">UICA</MenuContent>
-                <MenuContent to="/education/members">연구진</MenuContent>
-              </MenuBox>
-
-              <MenuBox>
-                <MenuContent to="/board/notice">공지사항</MenuContent>
-                <MenuContent to="/board/files">자료실</MenuContent>
-              </MenuBox>
-            </MenuDrop>
-          </>
+          <MenuDiv
+            onMouseEnter={toggleDropdownOn}
+            onMouseLeave={toggleDropdownOff}
+          >
+            {Object.keys(menuItems).map((elem, i) => (
+              <MenuItem key={i}>{elem}</MenuItem>
+            ))}
+          </MenuDiv>
         ) : (
-          <>
+          <HamburgerDiv>
             <Hamburger
               size={16}
               color={"#000"}
@@ -113,9 +107,30 @@ const Menu = () => {
               toggle={handleClick}
               duration={0.4}
             />
-          </>
+          </HamburgerDiv>
         )}
       </Container>
+      <DropdownContainer
+        onMouseEnter={toggleDropdownOn}
+        onMouseLeave={toggleDropdownOff}
+        dropdownOpen={dropdownOpen}
+      >
+        <DropdownMenu>
+          {Object.keys(menuItems).map((parent) => (
+            <DropdownMenuGroup key={parent}>
+              {menuItems[parent].map((path) => (
+                <DropdownMenuLink
+                  key={path}
+                  to={`/${parent.toLowerCase()}/${path.toLowerCase()}`}
+                  onClick={toggleDropdownOff}
+                >
+                  {path}
+                </DropdownMenuLink>
+              ))}
+            </DropdownMenuGroup>
+          ))}
+        </DropdownMenu>
+      </DropdownContainer>
 
       <Switch>
         <Route path="/"></Route>

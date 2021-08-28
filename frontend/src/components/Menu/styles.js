@@ -1,38 +1,20 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
-export const MenuDrop = styled.div`
-  display: none;
-  transition: 0.2s ease-in-out;
-  position: absolute;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-top: 240px;
-  width: 100%;
-  height: 170px;
-  background-color: rgba(0, 68, 131, 0.75);
-`;
-
 export const Container = styled.nav`
-  width: 100%;
-  margin: 0 auto;
   height: 70px;
+  padding: 0 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex: 0 0 auto;
   z-index: 1000;
-  &:hover ${MenuDrop} {
-    display: flex;
-  }
+  box-sizing: content-box;
 `;
 
 export const LogoLink = styled(Link)`
-  margin-left: 50px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 10px;
   gap: 10px;
 
   &:visited {
@@ -61,38 +43,22 @@ export const Logo = styled.img`
   }
 `;
 
-export const MenuBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 12%;
-`;
-export const MenuContent = styled(Link)`
-  color: white;
-  text-decoration: none;
-  z-index: 1;
-  display: block;
-  padding: 12px;
-  text-align: center;
-
-  &:hover {
-    color: grey;
-  }
-`;
-
 export const MenuDiv = styled.div`
-  width: 48%;
   display: flex;
+  gap: 10px;
+  margin-left: auto;
+  height: 100%;
+  align-items: center;
 `;
 
-export const MenuItem = styled(Link)`
-  text-decoration: none;
+export const MenuItem = styled.p`
   user-select: none;
   font-size: var(--font-size-4);
   position: relative;
   display: inline-block;
-  flex: 1;
   text-align: center;
   color: black;
+  min-width: 130px;
 
   &:visited {
     color: black;
@@ -111,11 +77,7 @@ export const MenuScreen = styled.div`
   top: 0px;
   padding-top: 70px;
   background-color: white;
-
-  &:hover ${MenuDrop} {
-    visiblity: visible;
-    opacity: 1;
-  }
+  z-index: 1000;
 `;
 
 export const MenuScreenContainer = styled.div`
@@ -129,4 +91,8 @@ export const MenuScreenContainer = styled.div`
 export const MenuScreenItem = styled(MenuItem)`
   margin: 5px 0;
   font-size: var(--font-size-5);
+`;
+
+export const HamburgerDiv = styled.div`
+  margin-left: auto;
 `;

@@ -40,11 +40,17 @@ const boardData = [
   },
 ];
 
-const Research_About = () => {
+const Research = ({ section }) => {
   const heroHeight = Math.min(window.innerWidth / 2, 400);
   return (
     <Main>
-      <Hero background={background} height={`${heroHeight}px`} />
+      <Hero
+        title={"Research"}
+        sections={["About", "Publications"]}
+        focusedSection={section}
+        background={background}
+        height={`${heroHeight}px`}
+      />
       <ContainerB>
         <Title>Research_About</Title>
         <Table>
@@ -78,4 +84,4 @@ const Research_About = () => {
   );
 };
 
-export default Research_About;
+export default Research;
