@@ -15,7 +15,13 @@ const EDUComponent = () => {
 
   return (
     <Main>
-      <Hero background={background} height={`${heroHeight}px`} />
+      <Hero
+        title={"ABOUT"}
+        sections={["ABOUT"]}
+        focusedSection={"ABOUT"}
+        background={background}
+        height={`${heroHeight}px`}
+      />
       <Container>
         <Image src={Background} alt=""></Image>
         <ContentContainer>

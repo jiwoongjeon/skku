@@ -22,7 +22,7 @@ import {
   Column,
   TableHome1,
   TableHome2,
-} from "../B_Announcement/components/Table";
+} from "../../components/Table";
 
 import background from "../../assets/images/mainbackground.png";
 import background2 from "../../assets/images/mainbackground2.png";

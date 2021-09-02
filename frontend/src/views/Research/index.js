@@ -46,7 +46,13 @@ const Research = ({ section }) => {
     <Main>
       <Hero
         title={"Research"}
-        sections={["About", "Publications"]}
+        sections={[
+          "About",
+          "Publications",
+          "Conference",
+          "Annual Report",
+          "Project",
+        ]}
         focusedSection={section}
         background={background}
         height={`${heroHeight}px`}

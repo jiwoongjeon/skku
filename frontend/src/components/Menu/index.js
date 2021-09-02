@@ -24,9 +24,9 @@ import {
 
 const menuItems = {
   About: ["Organization", "Leader", "Members"],
-  Research: ["About", "Publications"],
+  Research: ["About", "Publications", "Conference", "Annual Report", "Project"],
   Education: ["About", "K-NSSE", "UICA"],
-  Board: ["Notice", "Files"],
+  Board: ["Notice", "Files", "Bodo"],
 };
 
 const Menu = () => {

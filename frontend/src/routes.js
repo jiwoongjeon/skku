@@ -15,7 +15,7 @@ const ROUTES = [
     path: "/education/k-nsse",
     key: "EDUCATION",
     component: () => <KNSSEUPDATE />,
-  }, //exact
+  },
   {
     path: "/education/uica",
     key: "EDUCATION",
@@ -34,6 +34,21 @@ const ROUTES = [
     component: () => <Research section={"Publications"} />,
   },
   {
+    path: "/research/conference",
+    key: "RESEARCH",
+    component: () => <Research section={"Conference"} />,
+  },
+  {
+    path: "/research/annual%20report",
+    key: "RESEARCH",
+    component: () => <Research section={"Annual Report"} />,
+  },
+  {
+    path: "/research/project",
+    key: "RESEARCH",
+    component: () => <Research section={"Project"} />,
+  },
+  {
     path: "/board/notice",
     key: "BOARD",
     component: () => <Board section={"Notice"} />,
@@ -42,6 +57,11 @@ const ROUTES = [
     path: "/board/files",
     key: "BOARD",
     component: () => <Board section={"Files"} />,
+  },
+  {
+    path: "/board/bodo",
+    key: "BOARD",
+    component: () => <Board section={"Bodo"} />,
   },
 ];
 

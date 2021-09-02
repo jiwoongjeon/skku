@@ -46,7 +46,7 @@ const Board = ({ section }) => {
     <Main>
       <Hero
         title={"Board"}
-        sections={["Notice", "Files"]}
+        sections={["Notice", "Files", "Bodo"]}
         focusedSection={section}
         background={background}
         height={`${heroHeight}px`}
