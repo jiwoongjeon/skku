@@ -25,8 +25,12 @@ export const DropdownMenuGroup = styled.div`
   flex-direction: column;
   font-size: var(--font-size-3);
   min-width: 130px;
-  gap: 12px;
+  gap: 10px;
   margin: 10px 0;
+
+  @media only screen and (max-width: 960px) {
+    gap: 5px;
+  }
 `;
 export const DropdownMenuLink = styled(Link)`
   color: white;

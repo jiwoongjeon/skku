@@ -33,13 +33,13 @@ export const Title = styled.p`
   }
 
   @media only screen and (max-width: 960px) {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
   }
 `;
 
 export const Logo = styled.img`
   @media screen and (max-width: 960px) {
-    max-width: 32px;
+    max-width: 48px;
   }
 `;
 
@@ -49,6 +49,10 @@ export const MenuDiv = styled.div`
   margin-left: auto;
   height: 100%;
   align-items: center;
+
+  @media only screen and (max-width: 960px) {
+    gap: 5px;
+  }
 `;
 
 export const MenuItem = styled.p`

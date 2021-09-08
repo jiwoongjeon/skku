@@ -1,17 +1,25 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  max-width: 80%;
+  width: 90%;
   margin: 10% auto;
   @media only screen and (max-width: 960px) {
-    max-width: 90%;
+    width: 90%;
   }
 `;
 
-export const SubContainerBoard = styled.div`
-  justify-content: center;
+export const BoardsContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
+  gap: 15px;
+  margin: 0 5%;
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+    margin: 0;
+  }
 `;
 
 export const Title = styled.p`
@@ -84,14 +92,7 @@ export const SectionTitle = styled.p`
   text-align: center;
   font-size: var(--font-size-8);
   user-select: none;
-`;
-
-export const SectionTitle2 = styled.p`
-  margin-top: 20px;
-  text-align: center;
-  font-size: var(--font-size-8);
-  user-select: none;
-  color: white;
+  color: ${(props) => props.color ?? "#000"};
 `;
 
 export const SectionSubtitle = styled.p`
@@ -100,22 +101,5 @@ export const SectionSubtitle = styled.p`
   text-decoration: overline #004383 solid 2px;
   margin-bottom: 50px;
   user-select: none;
-`;
-
-export const SectionSubtitle2 = styled.p`
-  text-align: center;
-  font-size: var(--font-size-4);
-  text-decoration: overline #004383 solid 2px;
-  margin-bottom: 50px;
-  user-select: none;
-  color: white;
-`;
-
-export const CardviewContainer = styled.div`
-  height: 510px;
-  width: 1300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  color: ${(props) => props.color ?? "#000"};
 `;

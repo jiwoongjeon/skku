@@ -9,46 +9,18 @@ export const ContainerB = styled.div`
   border-radius: 10px;
 `;
 
-export const ContainerBoarding = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-`;
-
 export const Title = styled.h1`
   margin-left: 40px;
   font-size: var(--font-size-7);
   color: #4978a5;
 `;
 
-export const ContainerBoard = styled.div`
-  margin-top: 50px;
-  width: 70%;
-  margin-left: 25px;
-  margin-right: 25px;
-`;
-
-export const ContainerBoardHome = styled.div`
-  margin-top: 50px;
-  margin: 10px;
-`;
-
 export const Table = styled.table`
   // border-top-style: solid;
   // 이거 길이 제한하는 법을 모르겠습니다.
-`;
-
-export const TableHome1 = styled.table`
-  width: 576px;
-  background-color: #f3f3f3;
+  background-color: ${(props) => props.backgroundColor};
   border-radius: 10px;
-`;
-export const TableHome2 = styled.table`
-  width: 576px;
-  background-color: #4978a5;
-  color: white;
-  border-radius: 10px;
+  width: 100%;
 `;
 
 export const Row = styled.tr`
