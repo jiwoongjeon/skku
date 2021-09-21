@@ -8,6 +8,8 @@ import Research from "./views/Research";
 import EDUComponent from "./views/EDUUPDATE";
 import KNSSEUPDATE from "./views/KNSSEUPDATE";
 import UICAUPDATE from "./views/UICAUPDATE";
+import AboutLeader from "./views/AboutLeader";
+import AboutMember from "./views/AboutMember";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
@@ -22,7 +24,10 @@ const ROUTES = [
     component: () => <UICAUPDATE />,
   },
   { path: "/education", key: "EDUCATION", component: () => <EDUComponent /> },
+  { path: "/about/leader", key: "ABOUT", component: () => <AboutLeader /> },
+  { path: "/about/members", key: "ABOUT", component: () => <AboutMember /> },
   { path: "/about", key: "ABOUT", component: () => <About /> },
+
   {
     path: "/research/about",
     key: "RESEARCH",
