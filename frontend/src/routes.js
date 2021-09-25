@@ -5,29 +5,15 @@ import About from "./views/About";
 import Board from "./views/Board";
 import Home from "./views/Home";
 import Research from "./views/Research";
-import EDUComponent from "./views/EDUUPDATE";
-import KNSSEUPDATE from "./views/KNSSEUPDATE";
-import UICAUPDATE from "./views/UICAUPDATE";
+import Education from "./views/Education";
 import AboutLeader from "./views/AboutLeader";
 import AboutMember from "./views/AboutMember";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  {
-    path: "/education/k-nsse",
-    key: "EDUCATION",
-    component: () => <KNSSEUPDATE />,
-  },
-  {
-    path: "/education/uica",
-    key: "EDUCATION",
-    component: () => <UICAUPDATE />,
-  },
-  { path: "/education", key: "EDUCATION", component: () => <EDUComponent /> },
+  { path: "/about/organization", key: "ABOUT", component: () => <About /> },
   { path: "/about/leader", key: "ABOUT", component: () => <AboutLeader /> },
   { path: "/about/members", key: "ABOUT", component: () => <AboutMember /> },
-  { path: "/about", key: "ABOUT", component: () => <About /> },
-
   {
     path: "/research/about",
     key: "RESEARCH",
@@ -52,6 +38,31 @@ const ROUTES = [
     path: "/research/project",
     key: "RESEARCH",
     component: () => <Research section={"Project"} />,
+  },
+  {
+    path: "/education/about",
+    key: "EDUCATION",
+    component: () => <Education section={"About"} />,
+  },
+  {
+    path: "/education/k-nsse",
+    key: "EDUCATION",
+    component: () => <Education section={"K-NSSE"} />,
+  },
+  {
+    path: "/education/csse",
+    key: "CSSE",
+    component: () => <Education section={"CSSE"} />,
+  },
+  {
+    path: "/education/uica",
+    key: "EDUCATION",
+    component: () => <Education section={"UICA"} />,
+  },
+  {
+    path: "/education/researchteam",
+    key: "EDUCATION",
+    component: () => <Education section={"ResearchTeam"} />,
   },
   {
     path: "/board/notice",

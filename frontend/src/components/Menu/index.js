@@ -23,10 +23,28 @@ import {
 } from "./Dropdown";
 
 const menuItems = {
-  About: ["Organization", "Leader", "Members"],
-  Research: ["About", "Publications", "Conference", "Annual Report", "Project"],
-  Education: ["About", "K-NSSE", "UICA"],
-  Board: ["Notice", "Files", "Bodo"],
+  About: {
+    path: "about",
+    subPaths: ["Organization", "Leader", "Members"],
+  },
+  Research: {
+    path: "research",
+    subPaths: [
+      "About",
+      "Publications",
+      "Conference",
+      "Annual Report",
+      "Project",
+    ],
+  },
+  Education: {
+    path: "education",
+    subPaths: ["About", "K-NSSE", "CSSE", "UICA", "Research Team"],
+  },
+  Board: {
+    path: "board",
+    subPaths: ["Notice", "Files", "Bodo"],
+  },
 };
 
 const Menu = () => {
@@ -116,12 +134,14 @@ const Menu = () => {
         dropdownOpen={dropdownOpen}
       >
         <DropdownMenu>
-          {Object.keys(menuItems).map((parent) => (
-            <DropdownMenuGroup key={parent}>
-              {menuItems[parent].map((path) => (
+          {Object.keys(menuItems).map((elem) => (
+            <DropdownMenuGroup key={elem}>
+              {menuItems[elem].subPaths.map((path) => (
                 <DropdownMenuLink
                   key={path}
-                  to={`/${parent.toLowerCase()}/${path.toLowerCase()}`}
+                  to={`/${menuItems[
+                    elem
+                  ].path.toLowerCase()}/${path.toLowerCase()}`}
                   onClick={toggleDropdownOff}
                 >
                   {path}
