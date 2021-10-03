@@ -16,30 +16,42 @@ export const Title = styled.h1`
 `;
 
 export const Table = styled.table`
-  // border-top-style: solid;
-  // 이거 길이 제한하는 법을 모르겠습니다.
   background-color: ${(props) => props.backgroundColor};
+  border-collapse: collapse;
   border-radius: 10px;
   width: 100%;
 `;
 
 export const Row = styled.tr`
-  border-bottom: 1px solid grey;
+  padding: 20px 0;
   text-align: center;
 `;
 
 export const HeaderRow = styled.tr`
   text-align: center;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 `;
 
 export const HeaderColumn = styled.th`
   padding: 10px 0;
+  background-color: ${(props) => props.backgroundColor};
+  ${(props) => {
+    if (props.grid) {
+      return `
+        border: 1px solid black;
+      `;
+    }
+  }}
 `;
 
 export const Column = styled.td`
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: ${(props) => props.textAlign ?? "center"};
+  ${(props) => {
+    if (props.grid) {
+      return `
+        border: 1px solid black;
+      `;
+    }
+  }}
 `;

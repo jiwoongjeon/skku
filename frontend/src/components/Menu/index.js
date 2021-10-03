@@ -25,25 +25,39 @@ import {
 const menuItems = {
   About: {
     path: "about",
-    subPaths: ["Organization", "Leader", "Members"],
+    subPaths: {
+      Organization: "organization",
+      Leader: "leader",
+      Members: "members",
+    },
   },
   Research: {
     path: "research",
-    subPaths: [
-      "About",
-      "Publications",
-      "Conference",
-      "Annual Report",
-      "Project",
-    ],
+    subPaths: {
+      About: "about",
+      Publications: "publications",
+      Conference: "conference",
+      "Annual Report": "annualreport",
+      Project: "project",
+    },
   },
   Education: {
     path: "education",
-    subPaths: ["About", "K-NSSE", "CSSE", "UICA", "Research Team"],
+    subPaths: {
+      About: "about",
+      "K-NSSE": "k-nsse",
+      CSSE: "csse",
+      UICA: "uica",
+      "Research Team": "researchteam",
+    },
   },
   Board: {
     path: "board",
-    subPaths: ["Notice", "Files", "Bodo"],
+    subPaths: {
+      Notice: "notice",
+      Files: "files",
+      보도: "bodo",
+    },
   },
 };
 
@@ -136,15 +150,15 @@ const Menu = () => {
         <DropdownMenu>
           {Object.keys(menuItems).map((elem) => (
             <DropdownMenuGroup key={elem}>
-              {menuItems[elem].subPaths.map((path) => (
+              {Object.keys(menuItems[elem].subPaths).map((pathName) => (
                 <DropdownMenuLink
-                  key={path}
-                  to={`/${menuItems[
+                  key={pathName}
+                  to={`/${menuItems[elem].path.toLowerCase()}/${menuItems[
                     elem
-                  ].path.toLowerCase()}/${path.toLowerCase()}`}
+                  ].subPaths[pathName].toLowerCase()}`}
                   onClick={toggleDropdownOff}
                 >
-                  {path}
+                  {pathName}
                 </DropdownMenuLink>
               ))}
             </DropdownMenuGroup>

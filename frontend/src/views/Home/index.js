@@ -2,7 +2,6 @@ import { Main, Section, Cardtype1, Cardtype2 } from "../../components";
 import {
   Title,
   Subtitle,
-  CardviewContainer,
   Content,
   Container,
   Button,

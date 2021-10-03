@@ -62,7 +62,7 @@ const ROUTES = [
   {
     path: "/education/researchteam",
     key: "EDUCATION",
-    component: () => <Education section={"ResearchTeam"} />,
+    component: () => <Education section={"연구진"} />,
   },
   {
     path: "/board/notice",
