@@ -8,7 +8,7 @@ import {
   Row,
   Table,
   Title,
-} from "../../../components/Table";
+} from "../../components/Table";
 
 const boardData = [
   {
@@ -37,10 +37,10 @@ const boardData = [
   },
 ];
 
-const AnnualReport = () => {
+const Notice = () => {
   return (
     <Container>
-      <Title>Annual Report</Title>
+      <Title>Announcement</Title>
       <Table>
         <colgroup>
           <col style={{ width: "10%" }} />
@@ -71,4 +71,4 @@ const AnnualReport = () => {
   );
 };
 
-export default AnnualReport;
+export default Notice;

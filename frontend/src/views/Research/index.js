@@ -2,11 +2,11 @@ import React from "react";
 
 import background from "../../assets/images/mainbackground.png";
 import { Hero, Main } from "../../components";
-import About from "./SubPages/About";
-import Publications from "./SubPages/Publications";
-import Conference from "./SubPages/Conference";
-import AnnualReport from "./SubPages/AnnualReport";
-import Project from "./SubPages/Project";
+import About from "./About";
+import Publications from "./Publications";
+import Conference from "./Conference";
+import AnnualReport from "./AnnualReport";
+import Project from "./Project";
 
 const SubPageSelector = ({ section }) => {
   console.log(section);

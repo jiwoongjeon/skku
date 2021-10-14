@@ -1,4 +1,4 @@
-import { Container, OptionDiv, TypeText, PriceText } from "./styles";
+import { Container, OptionDiv, TypeText, PriceText, Button } from "./styles";
 
 const MembershipSelector = ({ activeOption, handleClick, ...restProps }) => {
   console.log(activeOption);
@@ -10,6 +10,7 @@ const MembershipSelector = ({ activeOption, handleClick, ...restProps }) => {
       >
         <TypeText>BASIC</TypeText>
         <PriceText>(무료)</PriceText>
+        <Button>BASIC 보고서 예시</Button>
       </OptionDiv>
       <OptionDiv
         active={activeOption === "premier"}
@@ -17,6 +18,7 @@ const MembershipSelector = ({ activeOption, handleClick, ...restProps }) => {
       >
         <TypeText>PREMIER</TypeText>
         <PriceText>(110만원)</PriceText>
+        <Button>PREMIER 보고서 예시</Button>
       </OptionDiv>
     </Container>
   );

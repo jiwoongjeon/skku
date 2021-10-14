@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 90%;
@@ -64,7 +65,11 @@ export const ButtonContainer = styled.div`
   gap: 10px;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 188px;
   height: 60px;
   justify-content: center;

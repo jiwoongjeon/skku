@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
 export const DropdownContainer = styled.div`
@@ -9,7 +9,6 @@ export const DropdownContainer = styled.div`
   top: 70px;
   width: 100%;
   background-color: rgba(0, 68, 131, 0.75);
-  padding-right: 10px;
   box-sizing: border-box;
   z-index: 10000;
 `;

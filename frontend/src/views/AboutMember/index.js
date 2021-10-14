@@ -1,4 +1,4 @@
-import { Section, SectionPage } from "../../components";
+import { Section } from "../../components";
 import SectionPageMember from "../../components/SectionPageMember";
 
 const AboutMember = () => {
@@ -6,8 +6,6 @@ const AboutMember = () => {
     <>
       <Section />
       <SectionPageMember />
-
-      {/* <List /> */}
     </>
   );
 };

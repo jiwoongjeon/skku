@@ -36,6 +36,7 @@ export const Button = styled.button`
   font-size: var(--font-size-3);
   border-radius: 5px;
   border: none;
+  color: #000;
 
   ${(props) => {
     if (props.active) {
@@ -54,9 +55,41 @@ export const Button = styled.button`
     }
   }}
 
+  @media only screen and (max-width: 960px) {
+    font-size: var(--font-size-2);
+    width: 95px;
+    height: 40px;
+  }
+`;
+
+export const Link = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  color: black;
+  width: 160px;
+  height: 40px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  font-size: var(--font-size-3);
+  border-radius: 5px;
+  border: none;
+
+  ${(props) => {
+    if (props.right) {
+      return `
+        margin-left: auto;
+      `;
+    }
+  }}
+
+  &:hover {
+    color: black;
+  }
 
   @media only screen and (max-width: 960px) {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-2);
     width: 95px;
     height: 40px;
   }
@@ -79,6 +112,7 @@ export const DownloadLink = styled.a`
 
 export const RowDiv = styled.div`
   display: flex;
+  align-items: center;
   gap: 5px;
 `;
 

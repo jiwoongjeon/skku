@@ -3,17 +3,27 @@ import { Route, Switch } from "react-router-dom";
 
 import About from "./views/About";
 import Board from "./views/Board";
+import Education from "./views/Education";
 import Home from "./views/Home";
 import Research from "./views/Research";
-import Education from "./views/Education";
-import AboutLeader from "./views/AboutLeader";
-import AboutMember from "./views/AboutMember";
 
 const ROUTES = [
   { path: "/", key: "ROOT", exact: true, component: () => <Home /> },
-  { path: "/about/organization", key: "ABOUT", component: () => <About /> },
-  { path: "/about/leader", key: "ABOUT", component: () => <AboutLeader /> },
-  { path: "/about/members", key: "ABOUT", component: () => <AboutMember /> },
+  {
+    path: "/about/organization",
+    key: "ABOUT",
+    component: () => <About section={"Organization"} />,
+  },
+  {
+    path: "/about/leader",
+    key: "ABOUT",
+    component: () => <About section={"Leader"} />,
+  },
+  {
+    path: "/about/members",
+    key: "ABOUT",
+    component: () => <About section={"Members"} />,
+  },
   {
     path: "/research/about",
     key: "RESEARCH",
@@ -30,7 +40,7 @@ const ROUTES = [
     component: () => <Research section={"Conference"} />,
   },
   {
-    path: "/research/annual%20report",
+    path: "/research/annualreport",
     key: "RESEARCH",
     component: () => <Research section={"Annual Report"} />,
   },

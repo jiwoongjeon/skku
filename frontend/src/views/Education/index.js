@@ -2,14 +2,13 @@ import React from "react";
 import { Hero, Main } from "../../components";
 
 import background from "../../assets/images/mainbackground.png";
-import About from "./SubPages/About";
-import KNSSE from "./SubPages/KNSSE";
-import CSSE from "./SubPages/CSSE";
-import UICA from "./SubPages/UICA";
-import ResearchTeam from "./SubPages/ResearchTeam";
+import About from "./About";
+import KNSSE from "./KNSSE";
+import CSSE from "./CSSE";
+import UICA from "./UICA";
+import ResearchTeam from "./ResearchTeam";
 
 const SubPageSelector = ({ section }) => {
-  console.log(section);
   switch (section) {
     case "About":
       return <About />;

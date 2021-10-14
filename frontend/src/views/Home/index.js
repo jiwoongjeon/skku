@@ -1,4 +1,4 @@
-import { Main, Section, Cardtype1, Cardtype2 } from "../../components";
+import { Main, Section, Cardtype2 } from "../../components";
 import {
   Title,
   Subtitle,
@@ -50,10 +50,6 @@ const boardData = [
   },
 ];
 
-const greeting = function greet() {
-  console.log("Hey there clicker!");
-};
-
 const Home = () => {
   return (
     <Main>
@@ -71,8 +67,8 @@ const Home = () => {
           </Content>
           <Content>Learn more about</Content>
           <ButtonContainer>
-            <Button onClick={() => greeting()}>K-NSSE</Button>
-            <Button>UICA</Button>
+            <Button to={"/education/k-nsse"}>K-NSSE</Button>
+            <Button to={"/education/uica"}>UICA</Button>
           </ButtonContainer>
         </Container>
       </Section>

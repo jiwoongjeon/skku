@@ -122,14 +122,39 @@ const Menu = () => {
           <Title>Global Education Group</Title>
         </LogoLink>
         {width >= 960 ? (
-          <MenuDiv
-            onMouseEnter={toggleDropdownOn}
-            onMouseLeave={toggleDropdownOff}
-          >
-            {Object.keys(menuItems).map((elem, i) => (
-              <MenuItem key={i}>{elem}</MenuItem>
-            ))}
-          </MenuDiv>
+          <>
+            <MenuDiv
+              onMouseEnter={toggleDropdownOn}
+              onMouseLeave={toggleDropdownOff}
+            >
+              {Object.keys(menuItems).map((elem, i) => (
+                <MenuItem key={i}>{elem}</MenuItem>
+              ))}
+            </MenuDiv>
+            <DropdownContainer
+              onMouseEnter={toggleDropdownOn}
+              onMouseLeave={toggleDropdownOff}
+              dropdownOpen={dropdownOpen}
+            >
+              <DropdownMenu>
+                {Object.keys(menuItems).map((elem) => (
+                  <DropdownMenuGroup key={elem}>
+                    {Object.keys(menuItems[elem].subPaths).map((pathName) => (
+                      <DropdownMenuLink
+                        key={pathName}
+                        to={`/${menuItems[elem].path.toLowerCase()}/${menuItems[
+                          elem
+                        ].subPaths[pathName].toLowerCase()}`}
+                        onClick={toggleDropdownOff}
+                      >
+                        {pathName}
+                      </DropdownMenuLink>
+                    ))}
+                  </DropdownMenuGroup>
+                ))}
+              </DropdownMenu>
+            </DropdownContainer>
+          </>
         ) : (
           <HamburgerDiv>
             <Hamburger
@@ -142,29 +167,6 @@ const Menu = () => {
           </HamburgerDiv>
         )}
       </Container>
-      <DropdownContainer
-        onMouseEnter={toggleDropdownOn}
-        onMouseLeave={toggleDropdownOff}
-        dropdownOpen={dropdownOpen}
-      >
-        <DropdownMenu>
-          {Object.keys(menuItems).map((elem) => (
-            <DropdownMenuGroup key={elem}>
-              {Object.keys(menuItems[elem].subPaths).map((pathName) => (
-                <DropdownMenuLink
-                  key={pathName}
-                  to={`/${menuItems[elem].path.toLowerCase()}/${menuItems[
-                    elem
-                  ].subPaths[pathName].toLowerCase()}`}
-                  onClick={toggleDropdownOff}
-                >
-                  {pathName}
-                </DropdownMenuLink>
-              ))}
-            </DropdownMenuGroup>
-          ))}
-        </DropdownMenu>
-      </DropdownContainer>
 
       <Switch>
         <Route path="/"></Route>

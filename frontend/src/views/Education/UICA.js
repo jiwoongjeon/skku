@@ -3,22 +3,23 @@ import React, { useState } from "react";
 import {
   RowDiv,
   Button,
+  Link,
   DownloadLink,
   SingleColumnContainer,
   Image,
   SectionTitle,
   SectionText,
-} from "../components";
+} from "./components";
 import {
   Column,
   HeaderColumn,
   HeaderRow,
   Row,
   Table,
-} from "../../../components/Table";
-import MembershipSelector from "../components/MembershipSelector";
-import tempImage from "../../../assets/images/temp.png";
-import profImage from "../../../assets/images/professor.png";
+} from "../../components/Table";
+import MembershipSelector from "./components/MembershipSelector";
+import tempImage from "../../assets/images/temp.png";
+import profImage from "../../assets/images/professor.png";
 
 const Intro = () => {
   return (
@@ -177,7 +178,7 @@ const Member = () => {
   );
 };
 
-const KNSSE = () => {
+const UICA = () => {
   const [activeSection, setActiveSection] = useState("intro");
 
   const handleButton = (section) => {
@@ -199,11 +200,13 @@ const KNSSE = () => {
         >
           맴버십 제도
         </Button>
-        <Button right>참여신청</Button>
+        <Link right href={"https://www.google.com"} target={"_blank"}>
+          참여신청
+        </Link>
       </RowDiv>
       {activeSection === "intro" ? <Intro /> : <Member />}
     </SingleColumnContainer>
   );
 };
 
-export default KNSSE;
+export default UICA;

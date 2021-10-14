@@ -1,13 +1,13 @@
 import React from "react";
 
-import tempImage from "../../../assets/images/temp.png";
+import tempImage from "../../assets/images/temp.png";
 import {
   Column,
   TwoColumnContainer,
   Image,
   SectionTitle,
   SectionText,
-} from "../components";
+} from "./components";
 
 const About = () => {
   return (

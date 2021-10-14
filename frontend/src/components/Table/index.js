@@ -4,13 +4,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3% auto;
-  min-width: 80%;
+  min-width: 95%;
   background-color: #f3f3f3;
   border-radius: 10px;
 `;
 
 export const Title = styled.h1`
-  margin-left: 40px;
+  margin: 10px 0px 10px 20px;
   font-size: var(--font-size-7);
   color: #4978a5;
 `;

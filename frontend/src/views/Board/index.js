@@ -2,9 +2,9 @@ import React from "react";
 import { Hero, Main } from "../../components";
 
 import background from "../../assets/images/mainbackground.png";
-import Bodo from "./SubPages/Bodo";
-import Files from "./SubPages/Files";
-import Notice from "./SubPages/Notice";
+import Bodo from "./Bodo";
+import Files from "./Files";
+import Notice from "./Notice";
 
 const SubPageSelector = ({ section }) => {
   console.log(section);

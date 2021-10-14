@@ -1,4 +1,4 @@
-import { Section, SectionPage } from "../../components";
+import { Section } from "../../components";
 import SectionPageLeader from "../../components/SectionPageLeader";
 
 const AboutMember = () => {

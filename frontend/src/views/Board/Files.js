@@ -8,7 +8,7 @@ import {
   Row,
   Table,
   Title,
-} from "../../../components/Table";
+} from "../../components/Table";
 
 const boardData = [
   {
@@ -37,10 +37,10 @@ const boardData = [
   },
 ];
 
-const Conference = () => {
+const Files = () => {
   return (
     <Container>
-      <Title>Conference</Title>
+      <Title>Files</Title>
       <Table>
         <colgroup>
           <col style={{ width: "10%" }} />
@@ -71,4 +71,4 @@ const Conference = () => {
   );
 };
 
-export default Conference;
+export default Files;

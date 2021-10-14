@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.nav`
   height: 70px;
-  padding: 0 10px;
   display: flex;
   align-items: center;
   flex: 0 0 auto;
   z-index: 1000;
-  box-sizing: content-box;
+  box-sizing: border-box;
 `;
 
 export const LogoLink = styled(Link)`
+  margin-left: 10px;
   display: flex;
   align-items: center;
   text-decoration: none;

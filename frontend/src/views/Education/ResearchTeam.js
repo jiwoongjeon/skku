@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SingleColumnContainer, SectionTitle } from "../components";
+import { SingleColumnContainer, SectionTitle } from "./components";
 
 const ResearchTeam = () => {
   return (

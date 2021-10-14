@@ -8,7 +8,7 @@ import {
   Row,
   Table,
   Title,
-} from "../../../components/Table";
+} from "../../components/Table";
 
 const boardData = [
   {
@@ -37,10 +37,10 @@ const boardData = [
   },
 ];
 
-const About = () => {
+const Bodo = () => {
   return (
     <Container>
-      <Title>About</Title>
+      <Title>보도</Title>
       <Table>
         <colgroup>
           <col style={{ width: "10%" }} />
@@ -71,4 +71,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Bodo;
