@@ -8,6 +8,5 @@ export { default as Menu } from "./Menu";
 export { default as Main } from "./Main";
 export { default as Footer } from "./Footer";
 export { default as Section } from "./Section";
-export { default as SectionPage } from "./SectionPage";
 export { default as Cardtype1 } from "./Cardtype1";
 export { default as Cardtype2 } from "./Cardtype2";
