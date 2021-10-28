@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Column,
@@ -10,34 +10,18 @@ import {
   Title,
 } from "../../components/Table";
 
-const boardData = [
-  {
-    postId: 1,
-    postTitle: "Title",
-    postDate: "2021-08-1",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 2,
-    postTitle: "Title",
-    postDate: "2021-08-2",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 3,
-    postTitle: "Title",
-    postDate: "2021-08-3",
-    postAuthor: "관리자",
-  },
-  {
-    postId: 4,
-    postTitle: "Title",
-    postDate: "2021-08-4",
-    postAuthor: "관리자",
-  },
-];
-
 const AnnualReport = () => {
+  const [annualReports, setAnnualReports] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "http://localhost:8000/api/v2/pages/?type=research.Publications&fields=*"
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setAnnualReports(res.items);
+      });
+  }, []);
   return (
     <Container>
       <Title>Annual Report</Title>
@@ -57,14 +41,15 @@ const AnnualReport = () => {
           </HeaderRow>
         </thead>
         <tbody>
-          {boardData.map((data) => (
-            <Row key={data.postId}>
-              <Column>{data.postId}</Column>
-              <Column>{data.postTitle}</Column>
-              <Column>{data.postDate}</Column>
-              <Column>{data.postAuthor}</Column>
-            </Row>
-          ))}
+          {annualReports &&
+            annualReports.map((data) => (
+              <Row key={data.postId}>
+                <Column>{data.postId}</Column>
+                <Column>{data.postTitle}</Column>
+                <Column>{data.postDate}</Column>
+                <Column>{data.postAuthor}</Column>
+              </Row>
+            ))}
         </tbody>
       </Table>
     </Container>

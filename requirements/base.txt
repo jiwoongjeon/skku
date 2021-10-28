@@ -1,3 +1,2 @@
 django
 wagtail
-django-cors-headers

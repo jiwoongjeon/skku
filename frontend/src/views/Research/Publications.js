@@ -15,7 +15,7 @@ const Publications = () => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:8000/api/v2/pages/?type=research.ResearchPage&fields=*"
+      "http://localhost:8000/api/v2/pages/?type=research.Publications&fields=*"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -42,14 +42,15 @@ const Publications = () => {
           </HeaderRow>
         </thead>
         <tbody>
-          {publications.map((data) => (
-            <Row key={data.id}>
-              <Column>{data.id}</Column>
-              <Column>{data.title}</Column>
-              <Column>{data.date}</Column>
-              <Column>{"Admin"}</Column>
-            </Row>
-          ))}
+          {publications &&
+            publications.map((data) => (
+              <Row key={data.id}>
+                <Column>{data.id}</Column>
+                <Column>{data.title}</Column>
+                <Column>{data.date}</Column>
+                <Column>{"Admin"}</Column>
+              </Row>
+            ))}
         </tbody>
       </Table>
     </Container>
