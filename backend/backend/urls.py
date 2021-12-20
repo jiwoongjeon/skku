@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.urls import include, path, re_path
+from django.urls import include, path
 from django.contrib import admin
 
 from wagtail.admin import urls as wagtailadmin_urls
@@ -8,16 +8,16 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from .api import api_router
 
+
 urlpatterns = [
     path('django-admin/', admin.site.urls),
-
-    path('api/v2/', api_router.urls),
 
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
 
-    # Ensure that the api_router line appears above the default Wagtail page serving route
-    re_path(r'^', include(wagtail_urls)),
+    path('api/v2/', api_router.urls),
+
+
 ]
 
 

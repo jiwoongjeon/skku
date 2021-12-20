@@ -1,14 +1,9 @@
-import React from "react";
-import { Background, Container, Title, Subtitle } from "./styles";
+import styled from "styled-components";
 
-const Main = () => {
-  return (
-    <Container>
-      <Background />
-      <Subtitle>SUNGKYUNKWAN UNIVERSITY</Subtitle>
-      <Title>Global Leading Education Group</Title>
-    </Container>
-  );
-};
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+`;
 
 export default Main;
