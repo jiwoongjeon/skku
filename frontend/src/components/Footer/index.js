@@ -1,14 +1,32 @@
-import styled from "styled-components/macro";
+import React from "react";
+import logo from "../../assets/images/skkufooterimg.jpeg";
+import {
+  Container,
+  Image,
+  Content,
+  ContentGroup,
+  Subtext,
+  Text,
+} from "./styles";
 
-const Container = styled.div`
-  height: 40px;
-  background-color: #ddd;
-  color: #575757;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex: 0 0 40px;
-`;
+const Footer = () => {
+  return (
+    <Container>
+      <Content>
+        <ContentGroup>
+          <Text>CONTACT</Text>
+          <Subtext>Ut diam dul, auctor vehicula pretium.</Subtext>
+          <Subtext>TEL: 02-0000-0000</Subtext>
+        </ContentGroup>
+        <ContentGroup>
+          <Subtext>Copyright &copy; Global Education Group</Subtext>
+          <Subtext>Design by Jiwoong Jeon and Brian Ko</Subtext>
+        </ContentGroup>
+      </Content>
 
-export default Container;
+      <Image src={logo} />
+    </Container>
+  );
+};
+
+export default Footer;

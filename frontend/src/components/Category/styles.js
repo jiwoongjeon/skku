@@ -1,39 +1,45 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.main`
+export const ContainerTest = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-`;
-
-export const Title = styled.a`
-  font-family: "Raleway", "Noto Sans KR", "Malgun Gothic", dotum, sans-serif;
-  color: black;
-  font-size: 50px;
-`;
-
-export const Subtitle = styled.a`
-  margin: 70px, 0px, 0px, 0px;
-  font-family: "Raleway", "Noto Sans KR", "Malgun Gothic", dotum, sans-serif;
-  font-weight: lighter;
-  top: 10px;
-  color: black;
 `;
 
 export const Submenu = styled.div`
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
   box-sizing: content-box;
   color: black;
-  position: relative;
-  top: 40px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 20px;
+  align-items: center;
 `;
 
 export const MenuItem = styled.a`
   font-size: 17px;
-  ${(props) => props.focused && `color: red`}
+  ${(props) => props.focused && `color: blue`}
+`;
+
+export const Subcontainer = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Subtitle = styled.p`
+  font-color: black;
+  font-size: 16px;
+  align-items: center;
+`;
+
+export const Title = styled.h1`
+  font-color: black;
+  font-size: 40px;
 `;
